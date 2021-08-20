@@ -1,0 +1,46 @@
+@import "./sizes.scss";
+
+.logo {
+    bottom: 1rem;
+    left: 1rem;
+    position: fixed;
+    width: calc(100% - 2rem);
+    z-index: 0;
+
+    @media only screen and (min-width: $sm) {
+        bottom: 2rem;
+        left: 2rem;
+    }
+}
+
+.mainSection {
+    background-color: white;
+    padding: 20vh 1rem 20vh;
+    @media only screen and (min-width: $sm) {
+        padding: 6vh 2rem 20vh;
+    }
+}
+
+.scroll {
+    display: block;
+    margin-left: auto;
+    margin-top: 10rem;
+}
+
+.heading {
+    display: block;
+    margin-left: auto;
+    margin-top: 14rem;
+    margin-bottom: 4rem;
+
+    h1 {
+        font-size: 1.1em;
+        margin-bottom: .5rem;
+    }
+
+    p {
+        font-size: 1.5em;
+        line-height: 1.5;
+        margin: 0;
+    }
+}

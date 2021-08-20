@@ -1,0 +1,125 @@
+#kronstadtSkater {
+    margin-top: 0;
+    max-width: 60vh;
+}
+
+@media only screen and (min-width: 415px) {
+    #kronstadtSkater {
+        margin-left: 16vw;
+    }
+}
+
+#myMoments {
+    max-width: 40vh;
+    margin-right: 0;
+}
+
+@media only screen and (min-width: 415px) {
+    #myMoments {
+        margin-top: -5rem;
+        margin-right: 5vw;
+    }
+}
+
+#Marengs {
+    max-width: 40vh;
+    margin-left: 0;
+}
+
+@media only screen and (min-width: 415px) {
+    #Marengs {
+        max-width: 60vh;
+        margin-left: 15vw;
+    }
+}
+
+#Maze, #is {
+    margin-right: 0;
+    max-width: 40vh;
+}
+
+@media only screen and (min-width: 415px) {
+    #Maze {
+        max-width: 60vh;
+        margin-left: auto;
+        margin-right: 15vw;
+    }
+}
+
+@media only screen and (min-width: 415px) {
+    #is {
+        max-width: 60vh;
+        margin-left: auto;
+        margin-right: 15vw;
+    }
+}
+
+#heading {
+    margin-left: 0;
+}
+
+@media only screen and (min-width: 415px) {
+    #heading {
+        max-width: 30vw;
+        margin-left: auto;
+        margin-right: 25vw;
+    }
+}
+
+#Femina1 {
+    max-width: 60vh;
+}
+
+@media only screen and (min-width: 415px) {
+    #Femina1 {
+        margin-left: 16vw;
+    }
+}
+
+
+#Femina2 {
+    max-width: 40vh;
+    margin-right: 0;
+}
+
+@media only screen and (min-width: 415px) {
+    #Femina2 {
+        margin-top: -5rem;
+        margin-right: 5vw;
+    }
+}
+
+@media only screen and (min-width: 415px) {
+    #Stol {
+        max-width: 980px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width: 415px) {
+    #Isabellas1 {
+        max-width: 65vh;
+        margin-left: auto;
+        margin-right: 10vw;
+    }
+}
+
+#Isabellas2 {
+    max-width: 40vh;
+    margin-left: 0;
+}
+
+@media only screen and (min-width: 415px) {
+    #Isabellas2 {
+        margin-top: -5rem;
+        margin-left: 5vw;
+    }
+}
+
+@media only screen and (min-width: 415px) {
+    #Femina3 {
+        max-width: 60vh;
+        margin-left: 15vw;
+    }
+}

@@ -1,0 +1,104 @@
+@import "./sizes.scss";
+
+.mainNav {
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    top: 0;
+    padding: 1rem;
+    width: 100%;
+    z-index: 3;
+
+    @media only screen and (min-width: $sm) {
+        padding: 2rem;
+    }
+}
+
+.socialLinks ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.socialLinks li {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: .6rem;
+}
+
+.menuBtn button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.menuIcon span {
+    background-color: black;
+    display: block;
+    margin-bottom: 1px;
+    height: .5rem;
+    width: 3rem;
+
+    &:last-child {
+        width: 1.5rem;
+    }
+}
+
+.menuIcon:hover {
+    cursor: pointer;
+}
+
+.menuContent {
+    background-color: var(--pink);
+    height: 100%;
+    right: 0;
+    max-width: 414px;
+    position: fixed;
+    top: 0;
+    transition: transform 1000ms var(--easeInOut);
+    padding: 4rem 1.25rem;
+    width: 100%;
+    z-index: -1;
+}
+
+.menuList {
+    bottom: 3rem;
+    color: black;
+    list-style-type: none;
+    line-height: 1;
+    font-size: 4em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    position:absolute;
+
+    li {
+        margin-bottom: .5rem;
+    }
+
+    li:hover {
+        color: var(--lightPink)
+    }
+}
+
+.listMail {
+    font-size: .4em;
+    margin-top: 3rem;
+    text-decoration: underline;
+}
+
+.menuClosed {
+    transform: translateX(100%);
+}
+
+.menuOpened {
+    transform: translateX(0);
+}
+
+.menuIconOpened span {
+
+    &:first-child, &:last-child {
+        display: none;
+    }
+}
