@@ -19,5 +19,7 @@ a {
 :root {
     --pink: #FF3177;
     --lightPink: #FFBCD3;
+    --red: #FF0000;
+    --yellow: #FFB400;
     --easeInOut: cubic-bezier(0.65, 0, 0.35, 1);
 }

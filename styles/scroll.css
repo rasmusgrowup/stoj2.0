@@ -1,4 +1,5 @@
 #kronstadtSkater {
+    background-color: #428EB3;
     margin-top: 0;
     max-width: 60vh;
 }
@@ -10,6 +11,7 @@
 }
 
 #myMoments {
+    background-color: #F9EBEA;
     max-width: 40vh;
     margin-right: 0;
 }
@@ -22,6 +24,7 @@
 }
 
 #Marengs {
+    background-color: #F3F6FA;
     max-width: 40vh;
     margin-left: 0;
 }
@@ -31,6 +34,22 @@
         max-width: 60vh;
         margin-left: 15vw;
     }
+}
+
+#Vimeo {
+    background-color: black;
+}
+
+@media only screen and (min-width: 415px) {
+    #Vimeo {
+        max-width:100vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#Maze {
+    background-color: #166C31;
 }
 
 #Maze, #is {
@@ -44,6 +63,10 @@
         margin-left: auto;
         margin-right: 15vw;
     }
+}
+
+#is {
+    background-color: #074E71;
 }
 
 @media only screen and (min-width: 415px) {
@@ -67,6 +90,7 @@
 }
 
 #Femina1 {
+    background-color: #DEA826;
     max-width: 60vh;
 }
 
@@ -78,6 +102,7 @@
 
 
 #Femina2 {
+    background-color: #A03D10;
     max-width: 40vh;
     margin-right: 0;
 }
@@ -89,12 +114,20 @@
     }
 }
 
+#Stol {
+    background-color: #E9CEEF;
+}
+
 @media only screen and (min-width: 415px) {
     #Stol {
         max-width: 980px;
         margin-right: auto;
         margin-left: auto;
     }
+}
+
+#Isabellas1 {
+    background-color: #E7D1A9;
 }
 
 @media only screen and (min-width: 415px) {
@@ -106,6 +139,7 @@
 }
 
 #Isabellas2 {
+    background-color: #78869B;
     max-width: 40vh;
     margin-left: 0;
 }
@@ -115,6 +149,10 @@
         margin-top: -5rem;
         margin-left: 5vw;
     }
+}
+
+#Femina3 {
+    background-color: #0B52C5;
 }
 
 @media only screen and (min-width: 415px) {
