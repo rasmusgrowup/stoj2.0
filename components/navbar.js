@@ -28,7 +28,17 @@ export default function Navbar() {
         </div>
 
         <div className={`${css.menuContent} ${isActive ? css.menuClosed : css.menuOpened}`}>
-            <ul className={css.menuList}>
+            <ul className={css.menuList} onClick={handleToggle}>
+                <li>
+                    <Link href="/">
+                        <a>Intro</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/gallery">
+                        <a>Galleri</a>
+                    </Link>
+                </li>
                 <li>
                     <Link href="/">
                         <a>Foto</a>
@@ -37,11 +47,6 @@ export default function Navbar() {
                 <li>
                     <Link href="/">
                         <a>Video</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/">
-                        <a>Galleri</a>
                     </Link>
                 </li>
                 <li>

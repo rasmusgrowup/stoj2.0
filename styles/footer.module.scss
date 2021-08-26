@@ -21,7 +21,7 @@
 
 .mail {
     color: white;
-    font-size: 2em;
+    font-size: clamp(18px, 8vw, 2.8em);
     font-weight: bold;
     margin-bottom: 1rem;
     text-align: left;

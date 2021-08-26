@@ -12,7 +12,7 @@ export default function Footer() {
 
     useEffect (() => {
 
-        var container = gsap.utils.toArray('.container');
+        var container = gsap.utils.toArray('.containerDisabled');
 
         container.forEach((container) => {
 

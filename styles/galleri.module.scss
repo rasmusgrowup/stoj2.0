@@ -1,0 +1,22 @@
+@import "./sizes.scss";
+
+.galleryWrapper {
+    column-gap: 2vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    padding: 10rem 1rem 2rem;
+    pointer-events: none;
+    position: relative;
+    row-gap: 2vw;
+    z-index: 1;
+
+    @media only screen and (min-width: $sm) {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        padding: 6vw;
+    }
+}
+
+.galleryItemInner {
+    position: relative;
+}
