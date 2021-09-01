@@ -1,19 +1,27 @@
 @import "./sizes.scss";
 
 .logo {
-    bottom: 2rem;
+    bottom: 1rem;
     left: 1rem;
+    pointer-events: none;
     position: fixed;
     width: calc(100% - 2rem);
     z-index: 0;
-
-    @media only screen and (min-width: $sm) {
-        bottom: 2rem;
-        left: 2rem;
-    }
 }
 
-.mainSection {
+.indexTitle {
+    bottom: 1rem;
+    font-size: clamp(26px, 22vw, 8em);
+    font-weight: bold;
+    left: 1rem;
+    letter-spacing: -.06em;
+    line-height: 1;
+    position: fixed;
+    //text-transform: uppercase;
+}
+
+
+.introSection {
     padding: 14vh 1rem 20vh;
     @media only screen and (min-width: $sm) {
         padding: 6vh 2rem 20vh;
@@ -34,12 +42,11 @@
     margin-bottom: 4rem;
 
     h1 {
-        font-size: 1.1em;
         margin-bottom: .5rem;
     }
 
     p {
-        font-size: 1.5em;
+        font-size: 1.2em;
         line-height: 1.5;
         margin: 0;
     }

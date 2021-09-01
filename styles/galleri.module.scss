@@ -1,20 +1,31 @@
 @import "./sizes.scss";
 
 .galleryWrapper {
-    column-gap: 2vw;
+    column-gap: .6rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     min-height: 100vh;
     padding: 10rem 1rem 2rem;
     pointer-events: none;
     position: relative;
-    row-gap: 2vw;
+    row-gap: .6rem;
     z-index: 1;
 
     @media only screen and (min-width: $sm) {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         padding: 6vw;
     }
+}
+
+.galleriTitle {
+    bottom: 1rem;
+    font-size: clamp(26px, 22vw, 8em);
+    font-weight: bold;
+    left: 1rem;
+    letter-spacing: -.06em;
+    line-height: 1;
+    position: fixed;
+    //text-transform: uppercase;
 }
 
 .galleryItemInner {

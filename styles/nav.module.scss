@@ -9,10 +9,6 @@
     padding: 1rem;
     width: 100%;
     z-index: 3;
-
-    @media only screen and (min-width: $sm) {
-        padding: 2rem;
-    }
 }
 
 .socialLinks ul {
@@ -25,12 +21,28 @@
     display: inline-block;
     font-weight: bold;
     margin-right: .6rem;
+
+    &:hover {
+        color: var(--pink)
+    }
+
+    &:nth-child(2):hover {
+        color: black;
+    }
 }
 
 .menuBtn button {
     background-color: transparent;
     border: none;
     padding: 0;
+}
+
+.menuIconOpened:hover span {
+    background-color: white;
+}
+
+.menuIconClosed:hover span {
+    background-color: var(--pink);
 }
 
 .menuIcon span {
@@ -67,7 +79,7 @@
     color: black;
     list-style-type: none;
     line-height: 1;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bold;
     margin: 0;
     padding: 0;
@@ -75,6 +87,7 @@
 
     li {
         margin-bottom: .5rem;
+        //text-transform: uppercase;
     }
 
     li:hover {
@@ -82,12 +95,27 @@
     }
 }
 
+.contactList {
+    list-style: none;
+    margin-top: 3rem;
+    padding: 0;
+
+    li {
+        text-transform: none;
+    }
+}
+
+.listTel {
+    font-size: .4em;
+}
+
+
 .listMail {
     font-size: .4em;
-    margin-top: 3rem;
     text-decoration: underline;
 }
 
+/*
 .menuClosed {
     transform: translateX(100%);
     transition: transform 1000ms var(--easeInOut);
@@ -97,6 +125,7 @@
     transform: translateX(0);
     transition: transform 1000ms var(--easeInOut);
 }
+*/
 
 .menuIconOpened span {
 

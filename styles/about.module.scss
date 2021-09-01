@@ -1,0 +1,162 @@
+@import "./sizes.scss";
+
+.aboutTitle {
+    bottom: 1rem;
+    font-size: clamp(26px, 28vw, 6em);
+    font-weight: bold;
+    left: 1rem;
+    letter-spacing: -.05em;
+    line-height: 1;
+    position: fixed;
+    //text-transform: uppercase;
+}
+
+.aboutSection {
+    min-height: 100vh;
+    padding: 5rem 1rem;
+}
+
+.introWrapper {
+    display: block;
+    position: relative;
+}
+
+@media only screen and (min-width: $sm) {
+    .introWrapper {
+        align-items: flex-end;
+        justify-content: center;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.imageWrapper {
+    background-color: #f8f8f8;
+    width: 100%;
+
+    @media only screen and (min-width: $sm) {
+        display: inline-block;
+        margin-right: 2rem;
+        max-width: 700px;
+        width: 60vh;
+    }
+}
+
+.textWrapper {
+    background-color: white;
+    font-weight: normal;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    z-index: 2;
+
+    @media only screen and (min-width: $sm) {
+        display: inline-block;
+        max-width: 414px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 3rem;
+        font-weight: normal;
+        font-size: 1.25em;
+    }
+}
+
+.contact {
+    margin-top: 1rem;
+
+    p {
+        font-size: 1.1em;
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    a {
+        display: block;
+    }
+
+    a:hover {
+        color: var(--pink)
+    }
+}
+
+.copyright {
+    display: block;
+    margin-top: 2rem;
+}
+
+.portrait {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.scroll, .heading {
+    background-color: var(--pink);
+    display: block;
+    margin-left: auto;
+    margin-top: 10rem;
+}
+
+.caption {
+    bottom: -1.6rem;
+    position: absolute;
+}
+
+#StudieOne {
+    background-color: #166C31;
+    max-width: 50vh;
+    margin-right: 0;
+
+    @media only screen and (min-width: $sm) {
+        margin-right: 20rem;
+    }
+}
+
+#headingStudie {
+    background-color: transparent;
+    max-width: 50vh;
+    margin-right: 0;
+    margin-top: 2rem;
+
+    @media only screen and (min-width: $sm) {
+        margin-right: 20rem;
+    }
+}
+
+#nick {
+    background-color: var(--pink);
+    margin-left: 24vw;
+    max-width: 40vh;
+}
+
+#martin {
+    background-color: var(--pink);
+    margin-right: 12vw;
+    max-width: 40vh;
+
+    @media only screen and (min-width: $sm) {
+        margin-top: -10rem;
+    }
+}
+
+#glass {
+    background-color: black;
+    max-width: 50vh;
+    margin-right: auto;
+}
+
+#kid {
+    background-color: orange;
+    margin-left: 0;
+    max-width: 32vh;
+}
+
+#StudieThree {
+    background-color: var(--red);
+    margin-right: 0;
+    max-width: 100vh;
+}

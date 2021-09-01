@@ -33,28 +33,7 @@ export default function Footer() {
     <footer className={css.mainFooter}>
         <div className={`${css.container} container`}>
             <div className={css.mail}><Link href="mailto:halloj@hallojstoj.dk"><a>halloj@hallojstoj.dk</a></Link></div>
-            <ul className={css.menuList}>
-                <li>
-                    <Link href="/">
-                        <a>Foto</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/">
-                        <a>Video</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/">
-                        <a>Galleri</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/">
-                        <a>Om os</a>
-                    </Link>
-                </li>
-            </ul>
+            <div className={css.address}>Havnegade 100L, Odense C - <Link href="#"><a>åben kort</a></Link></div>
             <div className={css.copyright}>©2021 STÖJ APS  ·  CVR.: 316237335</div>
         </div>
     </footer>

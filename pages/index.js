@@ -51,6 +51,13 @@ export default function Home() {
             });
         });
 
+        gsap.set('.imgAnim', {opacity: 0})
+        gsap.to('.imgAnim', {
+            opacity: 1,
+            duration: 1,
+            delay: 1,
+        });
+
         const player = new Player('intro-video', {
             id: 519957973,
             background: true,
@@ -62,26 +69,24 @@ export default function Home() {
 
   return (
     <>
-        <div className={css.logo}>
-            <Image src={Logo}></Image>
-        </div>
-        <section className={css.mainSection}>
+        <div className={css.indexTitle}>Portefølje</div>
+        <section className={css.introSection}>
 
-            <div className={`${css.scroll} scroll`} id="kronstadtSkater"><Image src={kronstadtSkater} layout="responsive" className={`fadeIn`}></Image></div>
+            <div className={`${css.scroll} scroll`} id="kronstadtSkater"><Image src={kronstadtSkater} layout="responsive" className={`imgAnim`} priority='true'></Image></div>
 
             <div className={`${css.scroll} scroll`} id="myMoments"><Image src={myMoments} layout="responsive" className={`fadeIn`}></Image></div>
 
             <div className={`${css.scroll} scroll`} id="Marengs"><Image src={Marengs} layout="responsive" className={`fadeIn`}></Image></div>
 
-            <div className={`${css.scroll} scroll`} id="Vimeo">
+            <div className={`${css.scroll} scroll`} id="Vimeo" style={{ display: 'none' }}>
                 <div className={`${css.introVideo} fadeIn`} id="intro-video" ></div>
             </div>
 
             <div className={`${css.scroll} scroll`} id="Maze"><Image src={kronstadtMaze} layout="responsive" className={`fadeIn`}></Image></div>
 
             <div className={`${css.heading} scroll`} id="heading">
-                <h1>Foto- og Videoproduktion</h1>
-                <p>Vi skaber spændende, visuelle universer, gennem billeder og video. Herunder har vi udvalgt nogle af de seneste projekter, vi har arbejdet på. Vi viser de projekter, der bedst illustrerer hvordan vi arbejder, og de opgaver, der krævede særligt kreative løsninger.</p>
+                <h1>Foto- og videoproduktion i Odense</h1>
+                <p>Vi skyder kommercielle billeder og videoer for de bedste mediehuse i Danmark. De vælger os, fordi vi kan overføre deres visuelle koncepter til film og foto - altid med respekt for kundernes unikke visuelle univers. De billeder og videoer vi producerer, bruges på tværs af trykte og digitale medier, og kan findes overalt i det ganske land. Desuden hjælper vi start-ups og etablerede brands med at udvikle deres eget unikke billedunivers.</p>
             </div>
 
             <div className={`${css.scroll} scroll`} id="Femina1"><Image src={feminaOne} layout="responsive" className={`fadeIn`}></Image></div>

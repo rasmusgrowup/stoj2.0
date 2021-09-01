@@ -2,50 +2,32 @@
 
 .mainFooter {
     background-color: white;
-    padding: 2rem 1rem 10rem;
+    padding: 1rem;
+    padding-bottom: 10rem;
 
     @media only screen and (min-width: $sm) {
-        padding: 2rem;
+        padding-bottom: 1rem;
     }
-}
 
-.container {
-    background-color: var(--red);
-    padding: 3rem 1rem;
-    position: relative;
-
-    @media only screen and (min-width: $sm) {
-        padding: 2rem;
+    a:hover {
+        color: var(--pink)
     }
 }
 
 .mail {
-    color: white;
-    font-size: clamp(18px, 8vw, 2.8em);
+    font-size: clamp(18px, 8vw, 2.2em);
     font-weight: bold;
     margin-bottom: 1rem;
     text-align: left;
     text-decoration: underline;
 
     @media only screen and (min-width: $sm) {
-        font-size: 2.8em;
-        margin-bottom: 2rem;
+        margin-bottom: .6rem;
         text-align: right;
     }
 }
 
-.menuList {
-    color: white;
-    list-style: none;
-    padding: 0;
-
-    li {
-        font-size: 2em;
-    }
-}
-
-.copyright {
-    color: white;
+.copyright, .address {
     text-align: left;
 
     @media only screen and (min-width: $sm) {

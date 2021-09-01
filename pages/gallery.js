@@ -31,6 +31,7 @@ function Gallery({ document, backgroundHex }) {
     console.log(document)
     return (
         <>
+            <div className={css.galleriTitle}>Galleri</div>
             <div className={css.galleryWrapper}>
                 {document.results.map((images) => (
                     <div className={css.galleryItem} key={images.id}>
@@ -54,7 +55,9 @@ export default Gallery
 
 export async function getStaticProps(context) {
     const document = await Client().query(
-        Prismic.Predicates.at("document.type", "image")
+        Prismic.Predicates.at("document.type", "image"),  {
+            orderings: '[document.first_publication_date desc]'
+        }
     );
 
     return {
