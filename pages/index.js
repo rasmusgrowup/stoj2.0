@@ -15,7 +15,6 @@ import css from '../styles/index.module.scss'
 import { gsap } from 'gsap';
 import React, { useRef, useState, useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import Player from '@vimeo/player';
 
 export default function Home() {
 
@@ -57,19 +56,14 @@ export default function Home() {
             duration: 1,
             delay: 1,
         });
-
-        const player = new Player('intro-video', {
-            id: 519957973,
-            background: true,
-            responsive: true
-        });
-
     }, [])
 
 
   return (
     <>
-        <div className={css.indexTitle}>Portefølje</div>
+        <div className={css.logo}>
+            <Image src={Logo} layout='responsive' />
+        </div>
         <section className={css.introSection}>
 
             <div className={`${css.scroll} scroll`} id="kronstadtSkater"><Image src={kronstadtSkater} layout="responsive" className={`imgAnim`} priority='true'></Image></div>
@@ -77,10 +71,6 @@ export default function Home() {
             <div className={`${css.scroll} scroll`} id="myMoments"><Image src={myMoments} layout="responsive" className={`fadeIn`}></Image></div>
 
             <div className={`${css.scroll} scroll`} id="Marengs"><Image src={Marengs} layout="responsive" className={`fadeIn`}></Image></div>
-
-            <div className={`${css.scroll} scroll`} id="Vimeo" style={{ display: 'none' }}>
-                <div className={`${css.introVideo} fadeIn`} id="intro-video" ></div>
-            </div>
 
             <div className={`${css.scroll} scroll`} id="Maze"><Image src={kronstadtMaze} layout="responsive" className={`fadeIn`}></Image></div>
 

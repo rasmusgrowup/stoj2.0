@@ -6,7 +6,7 @@ import Kid from '../public/KronstadtKid.jpg'
 import Nick from '../public/nick.png'
 import Martin from '../public/martin.png'
 import Glass from '../public/glass.jpg'
-import StudieThree from '../public/Studie_3.jpg'
+import StudieThree from '../public/Studie_3_bw.jpg'
 import css from '../styles/about.module.scss'
 import { gsap } from 'gsap';
 import React, { useRef, useState, useEffect } from 'react';

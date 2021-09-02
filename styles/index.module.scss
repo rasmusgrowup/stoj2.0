@@ -7,6 +7,10 @@
     position: fixed;
     width: calc(100% - 2rem);
     z-index: 0;
+
+    @media only screen and (min-width: $sm) {
+        width: 32vw;
+    }
 }
 
 .indexTitle {
@@ -17,7 +21,6 @@
     letter-spacing: -.06em;
     line-height: 1;
     position: fixed;
-    //text-transform: uppercase;
 }
 
 
