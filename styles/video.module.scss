@@ -1,0 +1,44 @@
+@import "./sizes.scss";
+
+.videoGalleryWrapper {
+    min-height: 100vh;
+    padding: 10rem 1rem 2rem;
+    position: relative;
+    z-index: 1;
+
+    @media only screen and (min-width: $sm) {
+        padding: 6vw;
+    }
+}
+
+.videoTitle {
+    bottom: 1rem;
+    font-size: clamp(26px, 22vw, 8em);
+    font-weight: bold;
+    left: 1rem;
+    letter-spacing: -.06em;
+    line-height: 1;
+    position: fixed;
+}
+
+.videoWrapper {
+    display: block;
+    margin: 4rem auto;
+    max-width: 800px;
+    position: relative;
+}
+
+.vimeoContainer {
+    padding-top: 56.25%;
+}
+
+.vimeoVideo {
+    bottom: 0;
+    display: block;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}

@@ -36,18 +36,6 @@
     }
 }
 
-#Vimeo {
-    background-color: black;
-}
-
-@media only screen and (min-width: 415px) {
-    #Vimeo {
-        max-width:100vh;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 #Maze {
     background-color: #166C31;
 }

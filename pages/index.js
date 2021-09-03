@@ -15,6 +15,7 @@ import css from '../styles/index.module.scss'
 import { gsap } from 'gsap';
 import React, { useRef, useState, useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Vimeo from '../components/vimeo'
 
 export default function Home() {
 

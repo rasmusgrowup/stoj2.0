@@ -60,7 +60,7 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/video">
                         <a>Video</a>
                     </Link>
                 </li>
