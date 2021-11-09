@@ -80,7 +80,7 @@ export default function About() {
                 <div className={`${css.scroll} scrollAbout`} id={css.StudieOne}>
                     <Image src={StudieTwo} layout="responsive" className={`fadeInAbout`}/>
                 </div>
-                <div className={`${css.heading} scrollAbout`} id={css.headingStudie}>
+                <div className={css.heading} id={css.headingStudie}>
                     <p><strong>Vores studie</strong> - studiet beliggende ved havnen i Odense er hjemsted for alt vores udstyr, baggrunde og regi. Herfra kan vi udføre alle opgaver, hvad end det er til magasiner, madoptagelse eller skabelsen af et helt andet rum.</p>
                 </div>
                 <div className={`${css.scroll} scrollAbout`} id={css.nick}>

@@ -1,44 +1,47 @@
 @import "./sizes.scss";
 
 .videoGalleryWrapper {
-    min-height: 100vh;
-    padding: 10rem 1rem 2rem;
-    position: relative;
-    z-index: 1;
+  min-height: 100vh;
+  padding: 10rem 1rem 2rem;
+  position: relative;
+  z-index: 1;
 
-    @media only screen and (min-width: $sm) {
-        padding: 6vw;
-    }
+  @media only screen and (min-width: $sm) {
+    padding: 6vw;
+  }
 }
 
 .videoTitle {
-    bottom: 1rem;
-    font-size: clamp(26px, 22vw, 8em);
-    font-weight: bold;
-    left: 1rem;
-    letter-spacing: -.06em;
-    line-height: 1;
-    position: fixed;
+  bottom: 1rem;
+  color: #fff;
+  font-size: clamp(26px, 12vw, 4em);
+  font-weight: bold;
+  left: 1rem;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  mix-blend-mode: difference;
+  position: fixed;
+  z-index: 3;
 }
 
 .videoWrapper {
-    display: block;
-    margin: 4rem auto;
-    max-width: 800px;
-    position: relative;
+  display: block;
+  margin: 4rem auto;
+  max-width: 800px;
+  position: relative;
 }
 
 .vimeoContainer {
-    padding-top: 56.25%;
+  padding-top: 56.25%;
 }
 
 .vimeoVideo {
-    bottom: 0;
-    display: block;
-    left: 0;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
+  bottom: 0;
+  display: block;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
 }

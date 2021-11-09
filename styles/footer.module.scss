@@ -1,36 +1,50 @@
 @import "./sizes.scss";
 
 .mainFooter {
-    background-color: white;
-    padding: 1rem;
-    padding-bottom: 10rem;
+  background-color: white;
+  padding: 1rem;
+  padding-bottom: 14rem;
+  position: relative;
 
-    @media only screen and (min-width: $sm) {
-        padding-bottom: 1rem;
-    }
+  @media only screen and (min-width: $sm) {
+    padding-bottom: 1rem;
+  }
 
-    a:hover {
-        color: var(--pink)
-    }
+  a:hover {
+    color: var(--pink);
+  }
+}
+
+.container {
+  bottom: 1rem;
+  position: absolute;
+  right: 1rem;
+
+  @media only screen and (max-width: $sm) {
+    bottom: 7rem;
+    left: 1rem;
+    right: auto;
+  }
 }
 
 .mail {
-    font-size: clamp(18px, 8vw, 2.2em);
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: left;
-    text-decoration: underline;
+  font-size: clamp(18px, 8vw, 2.2em);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+  text-decoration: underline;
 
-    @media only screen and (min-width: $sm) {
-        margin-bottom: .6rem;
-        text-align: right;
-    }
+  @media only screen and (min-width: $sm) {
+    margin-bottom: 0.6rem;
+    text-align: right;
+  }
 }
 
-.copyright, .address {
-    text-align: left;
+.copyright,
+.address {
+  text-align: left;
 
-    @media only screen and (min-width: $sm) {
-        text-align: right;
-    }
+  @media only screen and (min-width: $sm) {
+    text-align: right;
+  }
 }

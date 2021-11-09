@@ -1,33 +1,35 @@
 @import "./sizes.scss";
 
 .galleryWrapper {
-    column-gap: .6rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    min-height: 100vh;
-    padding: 10rem 1rem 2rem;
-    pointer-events: none;
-    position: relative;
-    row-gap: .6rem;
-    z-index: 1;
+  column-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+  padding: 6rem 1rem 2rem;
+  pointer-events: none;
+  position: relative;
+  row-gap: 4rem;
+  z-index: 1;
 
-    @media only screen and (min-width: $sm) {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        padding: 6vw;
-    }
+  @media only screen and (min-width: $sm) {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 6rem 3rem;
+  }
 }
 
 .galleriTitle {
-    bottom: 1rem;
-    font-size: clamp(26px, 22vw, 8em);
-    font-weight: bold;
-    left: 1rem;
-    letter-spacing: -.06em;
-    line-height: 1;
-    position: fixed;
-    //text-transform: uppercase;
+  bottom: 1rem;
+  color: #fff;
+  font-size: clamp(26px, 12vw, 4em);
+  font-weight: bold;
+  left: 1rem;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  mix-blend-mode: difference;
+  position: fixed;
+  z-index: 3;
 }
 
 .galleryItemInner {
-    position: relative;
+  position: relative;
 }
