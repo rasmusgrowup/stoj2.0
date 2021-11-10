@@ -58,12 +58,12 @@ export default function About() {
             <section className={css.aboutSection}>
                 <div className={css.introWrapper}>
                     <div className={css.imageWrapper}>
-                        <Image src={StudieOne} layout="responsive" width='500' height='700'  objectFit='cover' objectPosition='center' quality='100' className='imgAnim'/>
+                        <Image src={StudieOne} layout="responsive" width='500' height='700'  objectFit='cover' objectPosition='center' quality='100' className='imgAnim' alt='Stöj fotostudie'/>
                     </div>
                     <div className={css.textWrapper}>
                         <h1 className={css.h1}><strong>Vi er Stöj</strong> - To faguddannede fotografer, Nick Degn og Martin Kruse, med et lille fotostudie i hjertet af Odense. Vi skyder kommercielle billeder for landets største mediehuse, og arbejder med konceptudvikling for mindre virksomheder og start-ups. Vi er drevet af en passion for vores fag og sætter en ære i grundighed. På studiet vil i opleve en rolig atmosfære, hvor kreativiten kan få frit løb.</h1>
                         <div className={css.contact}>
-                            <p>@Nick Deign</p>
+                            <p>@Nick Degn</p>
                             <Link href='mailto:halloj@hallojstoj.dk'><a className={css.mailTo}>nick@hallojstoj.dk</a></Link>
                             <Link href='tel:30303030'><a className={css.telTo}>+45 30 30 30 30</a></Link>
                         </div>
@@ -78,27 +78,27 @@ export default function About() {
                     </div>
                 </div>
                 <div className={`${css.scroll} scrollAbout`} id={css.StudieOne}>
-                    <Image src={StudieTwo} layout="responsive" className={`fadeInAbout`}/>
+                    <Image src={StudieTwo} layout="responsive" className={`fadeInAbout`} alt='Stöj fotostudie'/>
                 </div>
                 <div className={css.heading} id={css.headingStudie}>
                     <p><strong>Vores studie</strong> - studiet beliggende ved havnen i Odense er hjemsted for alt vores udstyr, baggrunde og regi. Herfra kan vi udføre alle opgaver, hvad end det er til magasiner, madoptagelse eller skabelsen af et helt andet rum.</p>
                 </div>
                 <div className={`${css.scroll} scrollAbout`} id={css.nick}>
-                    <Image src={Nick} layout="responsive" className={`fadeInAbout`} quality='100'/>
-                    <span className={css.caption}>Nick Deign</span>
+                    <Image src={Nick} layout="responsive" className={`fadeInAbout`} quality='100' alt='Nick Degn'/>
+                    <span className={css.caption}>Nick Degn</span>
                 </div>
                 <div className={`${css.scroll} scrollAbout`} id={css.martin}>
-                    <Image src={Martin} layout="responsive" className={`fadeInAbout`} quality='100'/>
+                    <Image src={Martin} layout="responsive" className={`fadeInAbout`} quality='100' alt='Martin Kruse'/>
                     <span className={css.caption}>Martin Kruse</span>
                 </div>
                 <div className={`${css.scroll} scrollAbout`} id={css.glass}>
-                    <Image src={Glass} layout="responsive" className={`fadeInAbout`} quality='100'/>
+                    <Image src={Glass} layout="responsive" className={`fadeInAbout`} quality='100' alt=''/>
                 </div>
                 <div className={`${css.scroll} scrollAbout`} id={css.kid}>
-                    <Image src={Kid} layout="responsive" className={`fadeInAbout`} quality='100'/>
+                    <Image src={Kid} layout="responsive" className={`fadeInAbout`} quality='100' alt=''/>
                 </div>
                 <div className={`${css.scroll} scrollAbout`} id={css.StudieThree}>
-                    <Image src={StudieThree} layout="responsive" className={`fadeInAbout`} quality='100'/>
+                    <Image src={StudieThree} layout="responsive" className={`fadeInAbout`} quality='100' alt=''/>
                 </div>
             </section>
         </>

@@ -20,18 +20,6 @@ import ninthCase from '../public/Summerbird.jpg'
 import tenthCase from '../public/Mad2.jpg'
 import eleventhCase from '../public/Femina4.jpg'
 
-
-import kronstadtSkater from '../public/kronstadt-skater.jpg'
-import myMoments from '../public/mymoments.jpg'
-import Marengs from '../public/marengs.jpg'
-import feminaOne from '../public/Femina2.jpg'
-import feminaTwo from '../public/Femina1.jpg'
-import feminaThree from '../public/Femina3.jpg'
-import Stol from '../public/stol.jpg'
-import isabellasOne from '../public/Isabellas.jpg'
-import isabellasTwo from '../public/Isabellas2.jpg'
-import is from '../public/is.jpg'
-
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
   useEffect (() => {
@@ -98,7 +86,7 @@ export default function Home() {
   return (
     <>
       <div className={css.logo}>
-        <Image src={Logo} layout='responsive' />
+        <Image src={Logo} layout='responsive' alt='logo' />
       </div>
       <div className={css.indexTitle}>Projekter</div>
       <section className={css.introSection} style={{ display: 'none' }}>
@@ -125,47 +113,47 @@ export default function Home() {
         </div>
 
         <div className={`${css.scroll} scroll`} id="firstCase" style={{ backgroundColor: '#de7cb7' }}>
-          <Image src={firstCase} layout="responsive" className={`fadeIn`} priority='true' />
+          <Image src={firstCase} layout="responsive" className={`fadeIn`} priority='true' alt=''/>
         </div>
 
         <div className={`${css.scroll} scroll`} id="secondCase" style={{ backgroundColor: '#2c99d4' }}>
-          <Image src={secondCase} layout="responsive" className={`fadeIn`} />
+          <Image src={secondCase} layout="responsive" className={`fadeIn`} alt=''/>
         </div>
 
         <div className={`${css.scroll} scroll`} id="thirdCase" style={{ backgroundColor: '#140c09' }}>
-          <Image src={thirdCase} layout="responsive" className={`fadeIn`} />
+          <Image src={thirdCase} layout="responsive" className={`fadeIn`} alt=''/>
         </div>
 
         <div className={`${css.scroll} scroll`} id="fourthCase" style={{ backgroundColor: '#166c31' }}>
-          <Image src={fourthCase} layout="responsive" className={`fadeIn`} />
+          <Image src={fourthCase} layout="responsive" className={`fadeIn`} alt=''/>
           </div>
 
         <div className={`${css.scroll} scroll`} id="fifthCase" style={{ backgroundColor: '#9a243a' }}>
-          <Image src={fifthCase} layout="responsive" className={`fadeIn`} />
+          <Image src={fifthCase} layout="responsive" className={`fadeIn`} alt=''/>
         </div>
 
         <div className={`${css.scroll} scroll`} id="sixthCase" style={{ backgroundColor: '#a03d10' }}>
-          <Image src={sixthCase} layout="responsive" className={`fadeIn`} />
+          <Image src={sixthCase} layout="responsive" className={`fadeIn`} alt=''/>
         </div>
 
         <div className={`${css.scroll} scroll`} id="seventhCase" style={{ backgroundColor: '#222b2a' }}>
-          <Image src={seventhCase} layout="responsive" className={`fadeIn`} />
+          <Image src={seventhCase} layout="responsive" className={`fadeIn`} alt=''/>
         </div>
 
         <div className={`${css.scroll} scroll`} id="eightCase" style={{ backgroundColor: '#c66d16' }}>
-          <Image src={eightCase} layout="responsive" className={`fadeIn`} />
+          <Image src={eightCase} layout="responsive" className={`fadeIn`} alt=''/>
         </div>
 
         <div className={`${css.scroll} scroll`} id="ninthCase" style={{ backgroundColor: '#539329' }}>
-          <Image src={ninthCase} layout="responsive" className={`fadeIn`} />
+          <Image src={ninthCase} layout="responsive" className={`fadeIn`} alt=''/>
           </div>
 
         <div className={`${css.scroll} scroll`} id="tenthCase" style={{ backgroundColor: '#1ecf93' }}>
-          <Image src={tenthCase} layout="responsive" className={`fadeIn`} />
+          <Image src={tenthCase} layout="responsive" className={`fadeIn`} alt=''/>
         </div>
 
         <div className={`${css.scroll} scroll`} id="eleventhCase" style={{ backgroundColor: '#1e4acf' }}>
-          <Image src={eleventhCase} layout="responsive" className={`fadeIn`} />
+          <Image src={eleventhCase} layout="responsive" className={`fadeIn`} alt=''/>
           </div>
 
       </section>
