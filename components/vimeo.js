@@ -8,6 +8,8 @@ export default function Vimeo(props) {
     const player = new Player(`${props.id}`, {
       id: props.vimeoId,
       background: props.background,
+      byline: false,
+      portrait: false,
       responsive: true
     });
   }, [])

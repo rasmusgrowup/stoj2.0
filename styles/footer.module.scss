@@ -3,12 +3,8 @@
 .mainFooter {
   background-color: white;
   padding: 1rem;
-  padding-bottom: 14rem;
+  padding-bottom: 3rem;
   position: relative;
-
-  @media only screen and (min-width: $sm) {
-    padding-bottom: 1rem;
-  }
 
   a:hover {
     color: var(--pink);
@@ -19,12 +15,6 @@
   bottom: 1rem;
   position: absolute;
   right: 1rem;
-
-  @media only screen and (max-width: $sm) {
-    bottom: 7rem;
-    left: 1rem;
-    right: auto;
-  }
 }
 
 .mail {
@@ -42,9 +32,13 @@
 
 .copyright,
 .address {
-  text-align: left;
+  font-weight: 200;
+  font-size: 0.8em;
+  text-align: right;
+  max-width: 150px;
 
   @media only screen and (min-width: $sm) {
     text-align: right;
+    max-width: none;
   }
 }

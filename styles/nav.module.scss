@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   left: 0;
+  mix-blend-mode: difference;
   position: fixed;
   top: 0;
   padding: 1rem;
@@ -12,7 +13,6 @@
 }
 
 .menuContent {
-  background-color: var(--pink);
   background-color: #000;
   height: 100%;
   right: 0;
@@ -22,7 +22,7 @@
   transform: translateX(100%);
   padding: 4rem 1.25rem;
   width: 100%;
-  z-index: -1;
+  z-index: 3;
 }
 
 .listTel {
@@ -65,12 +65,13 @@
 }
 
 .socialLinks li {
+  color: #fff;
   display: inline-block;
   font-weight: 500;
   margin-right: 0.6rem;
 
   &:hover {
-    color: var(--pink);
+    color: grey;
   }
 }
 
@@ -95,15 +96,11 @@
 }
 
 .menuIcon span {
-  background-color: black;
+  background-color: #fff;
   display: block;
   margin-bottom: 1px;
   height: 0.5rem;
   width: 3rem;
-}
-
-.menuIconOpened span {
-  background-color: white;
 }
 
 .menuIconOpened span:first-child,
@@ -116,11 +113,11 @@
 }
 
 .menuIconOpened:hover span {
-  background-color: var(--pink);
+  background-color: grey;
 }
 
 .menuIconClosed:hover span {
-  background-color: var(--pink);
+  background-color: grey;
 }
 
 .menuIcon:hover {

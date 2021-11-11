@@ -1,13 +1,22 @@
 @import "./sizes.scss";
 
 .videoGalleryWrapper {
-  min-height: 100vh;
-  padding: 10rem 1rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 6rem 1rem;
   position: relative;
+  row-gap: 2rem;
   z-index: 1;
 
   @media only screen and (min-width: $sm) {
-    padding: 6vw;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+
+  @media only screen and (min-width: $m) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    padding: 6rem 3rem;
   }
 }
 
@@ -26,7 +35,6 @@
 
 .videoWrapper {
   display: block;
-  margin: 4rem auto;
   max-width: 800px;
   position: relative;
 }
