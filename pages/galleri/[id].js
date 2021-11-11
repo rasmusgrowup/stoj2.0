@@ -45,7 +45,7 @@ function Billeder({ billede }) {
   }, [])
 
   const exit = ({ currentTarget }) => {
-    router.back({}, [300])
+    router.back({}, [1000])
     gsap.to('.animSingleImage', {
     duration: 1,
     clipPath: 'inset(0% 0 100% 0)',
