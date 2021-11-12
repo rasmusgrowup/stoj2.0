@@ -41,7 +41,7 @@
 }
 
 .scrollSection {
-  padding: 4rem 1rem;
+  padding: 6rem 1rem 4rem;
 
   @media only screen and (min-width: $sm) {
     padding: 3rem 1rem 2rem;
@@ -98,71 +98,4 @@
       width: 100%;
     }
   }
-}
-
-.vimeoIntro {
-  height: calc(100vh - 4rem);
-  position: relative;
-
-  @media only screen and (max-width: $sm) {
-    height: calc(100vh - 2rem);
-  }
-
-  .videoWrapper {
-    display: block;
-    left: 50%;
-    margin: 0 auto;
-    max-width: 1400px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 72vw;
-
-    @media only screen and (max-width: $m) {
-      top: 45%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-    }
-  }
-
-  .vimeoContainer {
-    padding-top: 56.25%;
-  }
-
-  .vimeoVideo {
-    bottom: 0;
-    display: block;
-    left: 0;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    pointer-events: none;
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 7vw;
-    font-weight: 800;
-    margin: 0 auto;
-    max-width: 68%;
-    text-align: center;
-  }
-}
-
-.vimeoCaption {
-  display: none;
-  font-size: 0.9em;
-  margin: 1rem auto;
-  max-width: 1400px;
-  opacity: 0.25;
-  width: 72vw;
-
-  @media only screen and (max-width: $sm) {
-    width: 100%;
-  }
-}
-
-.scrollCaption {
-  opacity: 0.25;
 }

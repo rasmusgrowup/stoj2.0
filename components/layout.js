@@ -15,9 +15,9 @@ export default function Layout({ children }) {
       <CustomView condition={!isMobile}>
         <CustomCursor />
       </CustomView>
-      <main className={css.mainLayout}>
-        {children}
-      </main>
+        <main className={css.mainLayout}>
+          {children}
+        </main>
       <Footer />
     </>
   )
