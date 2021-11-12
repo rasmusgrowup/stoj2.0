@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import css from '../styles/index.module.scss'
 import Logo from '../public/logo_white.svg'
 
-import introImage from '../public/intro-image.jpg'
+import introImage from '../public/Stol2.jpg'
 import firstCase from '../public/Wonder.jpg'
 import secondCase from '../public/kronstadt-skater.jpg'
 import thirdCase from '../public/Mad.jpg'
