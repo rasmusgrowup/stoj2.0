@@ -45,12 +45,14 @@ function Billeder({ billede }) {
   }, [])
 
   const exit = ({ currentTarget }) => {
-    router.back({}, [1000])
     gsap.to('.animSingleImage', {
     duration: 1,
     clipPath: 'inset(0% 0 100% 0)',
     ease: 'Power3.easeOut',
     })
+    setTimeout(function() {
+      router.back()
+    }, 1000)
   }
 
   console.log(billede)
