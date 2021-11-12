@@ -107,7 +107,7 @@ export default function Home() {
 
       <div className={`${css.introAnimation} ${animateIntro ? '' : css.introAnimationPlayed}`} id="introAnim">
         <h1>Foto, film & halløj</h1>
-        <Image src={introImage} layout='fill' priority='true' objectFit='cover' objectPosition='center' quality='100'/>
+        <Image src={introImage} layout='fill' priority='true' objectFit='cover' objectPosition='bottom right' quality='100'/>
       </div>
 
       <div className={css.indexTitle}><span className={css.indexTitleInner} id="indexTitle">Projekter</span></div>
