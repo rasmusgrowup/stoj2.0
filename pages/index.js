@@ -20,11 +20,48 @@ import tenthCase from '../public/Mad2.jpg'
 import eleventhCase from '../public/Femina4.jpg'
 
 export default function Home() {
+  const [animateIntro, setAnimateIntro] = useState(true);
 
-  const [animateIntro, setAnimateIntro] = useState("true");
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect (() => {
+    if (window.sessionStorage.getItem("firstLoadDone") === null) {
+      setAnimateIntro(true);
+      window.sessionStorage.setItem("firstLoadDone", 1)
+      gsap.to('#introAnim', {
+        delay: 3,
+        duration: 2,
+        clipPath: 'inset(0 0 100% 0)',
+        ease: 'Power3.easeInOut',
+      })
+
+      gsap.from('#indexTitle', {
+        yPercent: 100,
+        duration: 2,
+        delay: 3.9,
+        ease: 'Power3.easeInOut',
+      })
+
+      gsap.from('#firstCase', {
+        delay: 3.5,
+        duration: 2,
+        clipPath: 'inset(100% 0 0 0)',
+        ease: 'Power3.easeInOut',
+      })
+
+      gsap.from('#secondCase', {
+        delay: 3.75,
+        duration: 2,
+        clipPath: 'inset(100% 0 0 0)',
+        ease: 'Power3.easeInOut',
+      })
+    } else {
+      setAnimateIntro(false);
+    }
+  })
+
+  useEffect (() => {
+
     var scroll = gsap.utils.toArray('.scroll');
 
     scroll.forEach((scroll) => {
@@ -66,7 +103,12 @@ export default function Home() {
       <div className={css.logo}>
         <Image src={Logo} layout='responsive' alt='logo' />
       </div>
-      <div className={css.indexTitle}><span>Projekter</span></div>
+
+      <div className={`${css.introAnimation} ${animateIntro ? '' : css.introAnimationPlayed}`} id="introAnim">
+        <h1>Foto, film & halløj</h1>
+      </div>
+
+      <div className={css.indexTitle}><span className={css.indexTitleInner} id="indexTitle">Projekter</span></div>
 
       <section className={css.scrollSection}>
         <div className={`${css.scroll} scroll`} id="firstCase" style={{ backgroundColor: '#de7cb7' }}>
