@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { gsap } from 'gsap';
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useLayoutEffect, useState, useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import css from '../styles/index.module.scss'
@@ -25,7 +25,7 @@ export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
   const tl = gsap.timeline({ defaults: { ease: 'Power3.easeInOut' }});
 
-  useEffect (() => {
+  useLayoutEffect (() => {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
       setAnimateIntro(true);
       window.sessionStorage.setItem("firstLoadDone", 1)
@@ -42,7 +42,7 @@ export default function Home() {
           duration: 2,
         }, '-=1.5')
         .to('.line', {
-          duration: 8,
+          duration: 10,
           ease: 'none',
           width: '100%',
         })
@@ -65,13 +65,13 @@ export default function Home() {
           duration: 2,
           clipPath: 'inset(100% 0 0 0)',
           ease: 'Power3.easeInOut',
-        }, '-=1.4');
+        }, '-=1.45');
     } else {
       setAnimateIntro(false);
     }
   })
 
-  useEffect (() => {
+  useLayoutEffect (() => {
     var scroll = gsap.utils.toArray('.scroll');
     scroll.forEach((scroll) => {
       gsap.from(scroll, {
@@ -84,11 +84,9 @@ export default function Home() {
         }
       });
     });
-
-
   }, [])
 
-  useEffect (() => {
+  useLayoutEffect (() => {
     var fadeIn = gsap.utils.toArray('.fadeIn');
     fadeIn.forEach((fadeIn) => {
       gsap.from(fadeIn, {
@@ -99,12 +97,12 @@ export default function Home() {
           end: "top 40%",
           scrub: true
         }
-    });
+      });
     });
   }, [])
 
 
-  useEffect (() => {
+  useLayoutEffect (() => {
     gsap.set('.imgAnim', {opacity: 0})
     gsap.to('.imgAnim', {
       opacity: 1,
@@ -131,12 +129,12 @@ export default function Home() {
             <div className={css.spanAnim}><span className='spanAnimInner'>ansvar for at holde et ensartet udtryk,</span></div>
             <div className={css.spanAnim}><span className='spanAnimInner'>skabe unikke historiefortællinger og</span></div>
             <div className={css.spanAnim}><span className='spanAnimInner'>udvikle jeres visuelle univers over tid.</span></div>
-            <div className={css.spanAnim}><span className='spanAnimInner'>Velkommen til.</span></div>
           </p>
           <span className={`${css.timeline} timeline`}>
             <span className={`${css.line} line`}></span>
           </span>
         </div>
+        <Image src={introImage} layout='fill' objectFit='cover' objectPosition='bottom right' qulaity='100' className={css.introImage}/>
       </div>
 
       <div className={css.indexTitle}><span className={css.indexTitleInner} id="indexTitle">Projekter</span></div>

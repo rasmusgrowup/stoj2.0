@@ -17,6 +17,7 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 
     @media only screen and (max-width: $sm) {
       min-width: calc(100% - 2rem);
@@ -80,6 +81,10 @@
       opacity: 1;
       width: 0%;
     }
+  }
+
+  .introImage {
+    opacity: 0.25;
   }
 }
 
