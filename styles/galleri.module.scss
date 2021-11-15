@@ -10,7 +10,7 @@
   row-gap: 4rem;
   z-index: 1;
 
-  @media only screen and (min-width: $sm) {
+  @media only screen and (min-width: $m) {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     padding: 6rem 3rem;
   }

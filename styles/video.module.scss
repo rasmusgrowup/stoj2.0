@@ -1,8 +1,13 @@
 @import "./sizes.scss";
 
+.videoSection {
+  min-height: calc(100vh - 68px);
+}
+
 .videoGalleryWrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  min-height: 100%;
   padding: 6rem 1rem;
   position: relative;
   row-gap: 2rem;

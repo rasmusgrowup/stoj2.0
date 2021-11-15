@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React, { useState, useEffect } from "react";
 import { gsap } from 'gsap';
 import css from '../styles/nav.module.scss'
+import Arrow from '../public/arrow.svg'
 
 export default function Navbar() {
     const [isActive, setActive] = useState("false");
@@ -34,9 +35,12 @@ export default function Navbar() {
     <nav className={css.mainNav}>
       <div className={css.socialLinks}>
         <ul>
-          <li><Link href="https://instagram.com/halloj_stoj"><a className={css.logo} target='_blank'>Instagram</a></Link></li>
-          <li>|</li>
-          <li><Link href="mailto:halloj@hallojstoj.dk"><a className={css.logo} target='_blank'>LinkedIn</a></Link></li>
+          <li>
+            <Link href="https://instagram.com/halloj_stoj"><a className={css.link} target='_blank'><span>Instagram</span><Image src={Arrow} width='9' height='9' /></a>
+            </Link>
+          </li>
+          <li style={{ display: 'none' }}>|</li>
+          <li style={{ display: 'none' }}><Link href="mailto:halloj@hallojstoj.dk"><a className={css.link} target='_blank'>LinkedIn</a></Link></li>
         </ul>
       </div>
 
@@ -71,8 +75,8 @@ export default function Navbar() {
           </Link>
         </li>
         <ul className={css.contactList}>
-          <li className={css.listTel}><Link href="tel:30703048"><a>Nick - 30703048</a></Link></li>
-          <li className={css.listTel}><Link href="tel:30703048"><a>Martin - 31623733</a></Link></li>
+          <li className={css.listTel}><Link href="tel:+4525700722"><a>Nick - 25 70 07 22</a></Link></li>
+          <li className={css.listTel}><Link href="tel:+4525663565"><a>Martin - 25 66 35 65 </a></Link></li>
           <li className={css.listMail}><Link href="mailto:halloj@hallojstoj.dk"><a>halloj@hallojstoj.dk</a></Link></li>
         </ul>
       </ul>

@@ -35,7 +35,7 @@ export default function Footer() {
     <footer className={css.mainFooter} style={{ display: `${router.pathname == "/galleri/[id]" ? 'none' : 'auto'}` }}>
         <div className={`${css.container} container`} >
             <div className={css.address} style={{ display: 'none' }}>Havnegade 100L, Odense C - <Link href="#"><a>åben kort</a></Link></div>
-            <div className={css.copyright}>©2021 STÖJ APS<br />CVR.: 316237335</div>
+            <div className={css.copyright}>©2021 STÖJ APS<br />CVR.: 38834053</div>
         </div>
     </footer>
   )

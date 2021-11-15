@@ -48,7 +48,6 @@
   li {
     letter-spacing: -0.05em;
     margin-bottom: 0.5rem;
-    //text-transform: uppercase;
   }
 }
 
@@ -67,11 +66,22 @@
 .socialLinks li {
   color: #fff;
   display: inline-block;
+  font-size: 1.1em;
   font-weight: 500;
   margin-right: 0.6rem;
 
   &:hover {
     color: grey;
+  }
+
+  .link {
+    align-items: flex-start;
+    display: flex;
+    line-height: 1;
+
+    span {
+      margin-right: 3px;
+    }
   }
 }
 
@@ -86,7 +96,8 @@
 }
 
 .socialLinks li:nth-child(2):hover {
-  color: black;
+  color: #fff;
+  cursor: default;
 }
 
 .menuBtn button {
