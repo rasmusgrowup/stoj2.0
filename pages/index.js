@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { gsap } from 'gsap';
 import React, { useRef, useLayoutEffect, useState, useEffect } from 'react';
+import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import css from '../styles/index.module.scss'
@@ -21,11 +21,11 @@ import tenthCase from '../public/Mad2.jpg'
 import eleventhCase from '../public/Femina4.jpg'
 
 export default function Home() {
-  gsap.registerPlugin(ScrollTrigger);
   const [animateIntro, setAnimateIntro] = useState(true);
   const tl = gsap.timeline({ defaults: { ease: 'Power3.easeInOut' }});
+  gsap.registerPlugin(ScrollTrigger);
 
-  useLayoutEffect (() => {
+  useEffect (() => {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
       setAnimateIntro(true);
       window.sessionStorage.setItem("firstLoadDone", 1)
@@ -71,7 +71,7 @@ export default function Home() {
     }
   })
 
-  useLayoutEffect (() => {
+  useEffect(() => {
     var scrollEl = gsap.utils.toArray('.scroll');
     scrollEl.forEach((scroll) => {
       gsap.from(scroll, {

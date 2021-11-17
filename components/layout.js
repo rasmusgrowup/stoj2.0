@@ -1,6 +1,7 @@
 import Navbar from './navbar'
 import Meta from './meta'
 import Footer from './footer'
+import React, { useRef, useEffect } from 'react'
 
 import css from '../styles/main.module.scss'
 import CustomCursor from '../components/cursor'
