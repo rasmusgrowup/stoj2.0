@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 import { gsap } from 'gsap';
 import React, { useRef, useLayoutEffect, useState, useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -21,8 +21,8 @@ import tenthCase from '../public/Mad2.jpg'
 import eleventhCase from '../public/Femina4.jpg'
 
 export default function Home() {
-  const [animateIntro, setAnimateIntro] = useState(true);
   gsap.registerPlugin(ScrollTrigger);
+  const [animateIntro, setAnimateIntro] = useState(true);
   const tl = gsap.timeline({ defaults: { ease: 'Power3.easeInOut' }});
 
   useLayoutEffect (() => {
@@ -72,8 +72,8 @@ export default function Home() {
   })
 
   useLayoutEffect (() => {
-    var scroll = gsap.utils.toArray('.scroll');
-    scroll.forEach((scroll) => {
+    var scrollEl = gsap.utils.toArray('.scroll');
+    scrollEl.forEach((scroll) => {
       gsap.from(scroll, {
       scale: .6,
         scrollTrigger: {
@@ -84,9 +84,7 @@ export default function Home() {
         }
       });
     });
-  }, [])
 
-  useLayoutEffect (() => {
     var fadeIn = gsap.utils.toArray('.fadeIn');
     fadeIn.forEach((fadeIn) => {
       gsap.from(fadeIn, {
@@ -101,16 +99,6 @@ export default function Home() {
     });
   }, [])
 
-
-  useLayoutEffect (() => {
-    gsap.set('.imgAnim', {opacity: 0})
-    gsap.to('.imgAnim', {
-      opacity: 1,
-      duration: 1,
-      delay: 1,
-    });
-  }, [])
-
   return (
     <>
       <div className={css.logo}>
@@ -120,7 +108,7 @@ export default function Home() {
       <div className={`${css.introAnimation} ${animateIntro ? '' : css.introAnimationPlayed}`} id="introAnim">
         <div className={css.introInner}>
           <h1 className='spanAnim'><span className='spanAnimInner'>Kreativt fotostudie i Odense centrum</span></h1>
-          <p>
+          <span className={css.textContainer}>
             <div className={css.spanAnim}><span className='spanAnimInner'>Vi producerer film og billeder for danske</span></div>
             <div className={css.spanAnim}><span className='spanAnimInner'>virksomheder og mediehuse i vores</span></div>
             <div className={css.spanAnim}><span className='spanAnimInner'>fotostudie ved Odense havn. Vores</span></div>
@@ -129,7 +117,7 @@ export default function Home() {
             <div className={css.spanAnim}><span className='spanAnimInner'>ansvar for at holde et ensartet udtryk,</span></div>
             <div className={css.spanAnim}><span className='spanAnimInner'>skabe unikke historiefortællinger og</span></div>
             <div className={css.spanAnim}><span className='spanAnimInner'>udvikle jeres visuelle univers over tid.</span></div>
-          </p>
+          </span>
           <span className={`${css.timeline} timeline`}>
             <span className={`${css.line} line`}></span>
           </span>

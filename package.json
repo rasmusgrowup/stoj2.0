@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@grcmichael/gscroll": "^1.0.15",
     "@prismicio/client": "^5.1.0",
     "@vimeo/player": "^2.16.0",
     "delay-react-route-exit": "^1.0.0",
