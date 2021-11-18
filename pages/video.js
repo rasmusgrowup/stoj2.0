@@ -35,9 +35,12 @@ export default function Video({ title, keywords, description }) {
       <section className={css.videoSection}>
         <div className={css.videoTitle}>Video</div>
         <div className={css.videoGalleryWrapper}>
-          <Vimeo id='first' vimeoId='388249746' bgColor='orange' background='false'/>
-          <Vimeo id='second' vimeoId='388259588' bgColor='orange' background='false'/>
-          <Vimeo id='third' vimeoId='388262361' bgColor='orange' background='false'/>
+          <Vimeo id='first' vimeoId='388249746' bgColor='black' background='false'/>
+          <Vimeo id='second' vimeoId='388259588' bgColor='black' background='false'/>
+          <Vimeo id='third' vimeoId='388262361' bgColor='black' background='false'/>
+          <Vimeo id='fourth' vimeoId='276234867' bgColor='black' background='false'/>
+          <Vimeo id='fifth' vimeoId='276223516' bgColor='black' background='false'/>
+          <Vimeo id='sixth' vimeoId='388236900' bgColor='black' background='false'/>
         </div>
       </section>
     </>

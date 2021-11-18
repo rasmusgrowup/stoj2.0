@@ -11,6 +11,9 @@ export default function Layout({ children }) {
     <>
       <Meta />
       <Navbar />
+      <CustomView condition={!isMobile}>
+        <CustomCursor />
+      </CustomView>
       <main className={css.mainLayout}>
         {children}
       </main>
