@@ -1,7 +1,6 @@
 import Navbar from './navbar'
 import Meta from './meta'
 import Footer from './footer'
-import React, { useRef, useEffect } from 'react'
 
 import css from '../styles/main.module.scss'
 import CustomCursor from '../components/cursor'
@@ -12,12 +11,9 @@ export default function Layout({ children }) {
     <>
       <Meta />
       <Navbar />
-      <CustomView condition={!isMobile}>
-        <CustomCursor />
-      </CustomView>
-        <main className={css.mainLayout}>
-          {children}
-        </main>
+      <main className={css.mainLayout}>
+        {children}
+      </main>
       <Footer />
     </>
   )

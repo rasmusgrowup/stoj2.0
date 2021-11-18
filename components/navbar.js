@@ -52,7 +52,7 @@ export default function Navbar() {
         </button>
       </div>
     </nav>
-    <div className={`${css.menuContent} ${isActive ? css.menuClosed : css.menuOpened} menu`}>
+    <div className={`${css.menuContent} ${isActive ? css.menuClosed : css.menuOpened} menu`} data-scroll-section>
       <ul className={css.menuList} onClick={click}>
         <li>
           <Link href="/">
