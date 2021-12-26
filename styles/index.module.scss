@@ -1,97 +1,5 @@
 @import "./sizes.scss";
 
-.introAnimation {
-  bottom: 0;
-  background-color: #000;
-  clip-path: inset(0 0 0% 0);
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  z-index: 99;
-
-  .introInner {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-
-    @media only screen and (max-width: $sm) {
-      min-width: calc(100% - 2rem);
-      width: calc(100% - 2rem);
-    }
-  }
-
-  h1 {
-    display: block;
-    color: white;
-    font-size: 1em;
-    margin: 0;
-    margin-bottom: 1rem;
-    mix-blend-mode: difference;
-    overflow: hidden;
-    z-index: 1;
-
-    span {
-      display: block;
-    }
-  }
-
-  .textContainer {
-    color: white;
-    font-size: 2vw;
-    font-weight: 300;
-    margin: 0;
-    mix-blend-mode: difference;
-
-    .spanAnim {
-      display: block;
-      overflow: hidden;
-      position: relative;
-    }
-
-    span {
-      display: block;
-    }
-
-    @media only screen and (max-width: $sm) {
-      font-size: 1.2em;
-    }
-  }
-
-  .timeline {
-    background-color: grey;
-    display: block;
-    height: 3px;
-    margin-top: 1rem;
-    position: absolute;
-    width: 100%;
-
-    .line {
-      background-color: white;
-      content: '';
-      display: block;
-      height: 3px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      opacity: 1;
-      width: 0%;
-    }
-  }
-
-  .introImage {
-    opacity: 0.25;
-  }
-}
-
-.introAnimationPlayed {
-  display: none;
-}
-
 .logo {
   bottom: 50%;
   left: 50%;
@@ -100,7 +8,7 @@
   position: fixed;
   transform: translate(-50%, 45%);
   width: calc(100% - 2rem);
-  z-index: 0;
+  z-index: 1;
 
   @media only screen and (min-width: $sm) {
     width: 62vw;

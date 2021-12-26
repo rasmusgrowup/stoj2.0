@@ -23,45 +23,19 @@ import eleventhCase from '../public/Femina4.jpg'
 export default function Home() {
 
   const [animateIntro, setAnimateIntro] = useState(true);
-  const tl = gsap.timeline({ defaults: { ease: 'Power3.easeInOut' }});
+  const tl = gsap.timeline({ delay: 1, defaults: { ease: 'Power3.easeInOut' }});
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect (() => {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
       setAnimateIntro(true);
       window.sessionStorage.setItem("firstLoadDone", 1)
-
       tl
-        .from('.spanAnimInner', {
-          yPercent: 100,
-          stagger: 0.1,
-          duration: 1.5,
-          delay: 0.5,
-        })
-        .from('.timeline', {
-          opacity: 0,
-          duration: 2,
-        }, '-=1.5')
-        .to('.line', {
-          duration: 10,
-          ease: 'none',
-          width: '100%',
-        })
-        .to('#introAnim', {
-          duration: 2,
-          clipPath: 'inset(0 0 100% 0)',
-          ease: 'Power3.easeInOut',
-        })
-        .from('#indexTitle', {
-          yPercent: 100,
-          duration: 2,
-          ease: 'Power3.easeInOut',
-        }, '-=1.5')
         .from('#firstCase', {
           duration: 2,
           clipPath: 'inset(100% 0 0 0)',
           ease: 'Power3.easeInOut',
-        }, '-=1.45')
+        })
         .from('#secondCase', {
           duration: 2,
           clipPath: 'inset(100% 0 0 0)',
@@ -69,6 +43,12 @@ export default function Home() {
         }, '-=1.45');
     } else {
       setAnimateIntro(false);
+      gsap.set('#firstCase', {
+        clipPath: 'inset(0% 0 0 0)',
+      });
+      gsap.set('#secondCase', {
+        clipPath: 'inset(0% 0 0 0)',
+      })
     }
   }, [])
 
@@ -98,33 +78,13 @@ export default function Home() {
         }
       });
     });
-  })
+  }, [])
 
   return (
     <>
       <div className={css.logo}>
         <Image src={Logo} layout='responsive' alt='logo' />
       </div>
-
-      <div className={`${css.introAnimation} ${animateIntro ? '' : css.introAnimationPlayed}`} id="introAnim">
-       <div className={css.introInner}>
-         <h1 className='spanAnim'><span className='spanAnimInner'>Kreativt fotostudie i Odense centrum</span></h1>
-         <span className={css.textContainer}>
-           <div className={css.spanAnim}><span className='spanAnimInner'>Vi producerer film og billeder for danske</span></div>
-           <div className={css.spanAnim}><span className='spanAnimInner'>virksomheder og mediehuse i vores</span></div>
-           <div className={css.spanAnim}><span className='spanAnimInner'>fotostudie ved Odense havn. Vores</span></div>
-           <div className={css.spanAnim}><span className='spanAnimInner'>fotografier og film bruges på tværs af</span></div>
-           <div className={css.spanAnim}><span className='spanAnimInner'>digitale og trykte medier. Vi tager</span></div>
-           <div className={css.spanAnim}><span className='spanAnimInner'>ansvar for at holde et ensartet udtryk,</span></div>
-           <div className={css.spanAnim}><span className='spanAnimInner'>skabe unikke historiefortællinger og</span></div>
-           <div className={css.spanAnim}><span className='spanAnimInner'>udvikle jeres visuelle univers over tid.</span></div>
-         </span>
-         <span className={`${css.timeline} timeline`}>
-           <span className={`${css.line} line`}></span>
-         </span>
-       </div>
-       <Image src={introImage} layout='fill' objectFit='cover' objectPosition='bottom right' qulaity='100' className={css.introImage}/>
-     </div>
 
       <div className={css.indexTitle}><span className={css.indexTitleInner} id="indexTitle">Projekter</span></div>
 
