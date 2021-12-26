@@ -2,7 +2,7 @@
 
 .aboutSection {
   min-height: 100vh;
-  padding: 4rem 1rem;
+  padding: 5rem 1rem;
 }
 
 .introWrapper {
@@ -22,13 +22,17 @@
 
 .imageWrapper {
   background-color: #f8f8f8;
+  max-width: 700px;
   width: 100%;
 
   @media only screen and (min-width: $sm) {
     display: inline-block;
     margin-right: 2rem;
-    max-width: 700px;
-    width: 52vh;
+    width: 36vh;
+  }
+
+  @media only screen and (min-width: $m) {
+    width: 50vh;
   }
 }
 
@@ -141,15 +145,34 @@
   background-color: var(--pink);
   margin-left: 20vw;
   max-width: 34vh;
+
+  @media only screen and (min-width: $sm) {
+    margin-left: 4vw;
+    max-width: 26vh;
+  }
+
+  @media only screen and (min-width: $m) {
+    margin-left: 20vw;
+    max-width: 34vh;
+  }
 }
 
 #martin {
   background-color: var(--pink);
   margin-right: 20vw;
+  margin-top: 4rem;
   max-width: 34vh;
 
   @media only screen and (min-width: $sm) {
-    margin-top: -10rem;
+    margin-right: 4vw;
+    margin-top: -18rem;
+    max-width: 26vh;
+  }
+
+  @media only screen and (min-width: $m) {
+    margin-top: -18rem;
+    margin-right: 20vw;
+    max-width: 34vh;
   }
 }
 
@@ -157,6 +180,14 @@
   background-color: black;
   max-width: 50vh;
   margin-right: auto;
+
+  @media only screen and (min-width: $sm) {
+    max-width: 34vh;
+  }
+
+  @media only screen and (min-width: $m) {
+    max-width: 50vh;
+  }
 }
 
 #kid {

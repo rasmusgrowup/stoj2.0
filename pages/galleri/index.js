@@ -51,8 +51,6 @@ function Gallery({ children, billeder, backgroundHex }) {
     })
   }
 
-  console.log(billeder)
-
   return (
     <>
       <div className={css.galleriTitle}>Galleri</div>
