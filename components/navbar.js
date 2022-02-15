@@ -6,29 +6,29 @@ import css from '../styles/nav.module.scss'
 import Arrow from '../public/arrow.svg'
 
 export default function Navbar() {
-    const [isActive, setActive] = useState("false");
-    const handleToggle = () => {
-        setActive(!isActive);
-    };
-    const [tl] = useState(gsap.timeline({ paused: true }));
+  const [isActive, setActive] = useState("false");
+  const handleToggle = () => {
+      setActive(!isActive);
+  };
+  const [tl] = useState(gsap.timeline({ paused: true }));
 
-    useEffect(() => {
-        tl.to('.menu', {
-            xPercent: -100,
-            duration: .6,
-            ease: 'Power3.easeInOut'
-        })
-        tl.reverse();
-    }, []);
+  useEffect(() => {
+      tl.to('.menu', {
+          xPercent: -100,
+          duration: .6,
+          ease: 'Power3.easeInOut'
+      })
+      tl.reverse();
+  }, []);
 
-    const toggleMenu = () => {
-      tl.reversed(!tl.reversed());
-    }
+  const toggleMenu = () => {
+    tl.reversed(!tl.reversed());
+  }
 
-    const click = () => {
-      handleToggle();
-      toggleMenu();
-    }
+  const click = () => {
+    handleToggle();
+    toggleMenu();
+  }
 
   return (
   <>
@@ -71,7 +71,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link href="/om-stoj">
-            <a>Om Stöj</a>
+            <a>Studiet</a>
           </Link>
         </li>
         <ul className={css.contactList}>

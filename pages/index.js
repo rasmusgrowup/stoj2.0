@@ -15,7 +15,7 @@ import fourthCase from '../public/Maze.jpg'
 import fifthCase from '../public/Isabellas.jpg'
 import sixthCase from '../public/Femina.jpg'
 import seventhCase from '../public/Stol2.jpg'
-import eightCase from '../public/Worker.jpg'
+import eightCase from '../public/Udsnit_ByMickleit.jpg'
 import ninthCase from '../public/Summerbird.jpg'
 import tenthCase from '../public/Mad2.jpg'
 import eleventhCase from '../public/Femina4.jpg'
@@ -78,6 +78,10 @@ export default function Home() {
         }
       });
     });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    }
   }, [])
 
   return (
@@ -93,12 +97,23 @@ export default function Home() {
           <Image src={firstCase} layout="responsive" className={`fadeIn`} priority='true' alt=''/>
         </div>
 
-        <div className={`${css.scroll} scroll`} id="secondCase" style={{ backgroundColor: '#2c99d4' }}>
-          <Image src={secondCase} layout="responsive" className={`fadeIn`} priority='true' alt=''/>
+        <div className={`${css.scroll} scroll`} id="secondCase" style={{ backgroundColor: '#0a0a0a' }}>
+          <Image src={eightCase} layout="responsive" className={`fadeIn`} alt=''/>
         </div>
 
-        <div className={`${css.scroll} scroll`} id="thirdCase" style={{ backgroundColor: '#140c09' }}>
-          <Image src={thirdCase} layout="responsive" className={`fadeIn`} alt=''/>
+        <div className={`${css.scroll} scroll`} id="thirdCase" style={{ backgroundColor: 'grey' }}>
+          <video
+            className='fadeIn'
+            autoPlay
+            muted
+            loop
+            playsInline
+            width='100%'
+            height='100%'
+            alt=''
+            >
+            <source src={'/Test_web_frontpage.mp4'} type='video/mp4' />
+          </video>
         </div>
 
         <div className={`${css.scroll} scroll`} id="fourthCase" style={{ backgroundColor: '#166c31' }}>
@@ -117,8 +132,19 @@ export default function Home() {
           <Image src={seventhCase} layout="responsive" className={`fadeIn`} alt=''/>
         </div>
 
-        <div className={`${css.scroll} scroll`} id="eightCase" style={{ backgroundColor: '#c66d16' }}>
-          <Image src={eightCase} layout="responsive" className={`fadeIn`} alt=''/>
+        <div className={`${css.scroll} scroll`} id="eightCase" style={{ backgroundColor: '#FFA427' }}>
+          <video
+            className='fadeIn'
+            autoPlay
+            muted
+            loop
+            playsInline
+            width='100%'
+            height='100%'
+            alt=''
+            >
+            <source src={'/Tinekhome.mp4'} type='video/mp4' />
+          </video>
         </div>
 
         <div className={`${css.scroll} scroll`} id="ninthCase" style={{ backgroundColor: '#539329' }}>

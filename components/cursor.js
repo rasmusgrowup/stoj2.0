@@ -5,9 +5,10 @@ const Cursor = () => {
   const Router = useRouter()
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [hidden, setHidden] = useState(false);
-  const [click, setClick] = useState(false);
   const [openImage, setOpenImage] = useState(false);
   const [closeImage, setCloseImage] = useState(false);
+  const [previousImage, setPreviousImage] = useState(false);
+  const [nextImage, setNextImage] = useState(false);
   const [linkHover, setLinkHover] = useState(false);
   const [atagHover, setAtagHover] = useState(false);
 
@@ -15,25 +16,12 @@ const Cursor = () => {
     const addEventListeners = () => {
       document.addEventListener('mousemove', mMove);
       document.addEventListener('mouseenter', mEnter);
-      document.addEventListener('mouseleave', mLeave);
-      document.addEventListener('mousedown', mDown);
-      document.addEventListener('mouseup', mUp);
     };
 
     const removeEventListeners = () => {
       document.removeEventListener('mousemove', mMove);
       document.removeEventListener('mouseenter', mEnter);
       document.removeEventListener('mouseleave', mLeave);
-      document.removeEventListener('mousedown', mDown);
-      document.removeEventListener('mouseup', mUp);
-    };
-
-    const mDown = () => {
-      setClick(true);
-    };
-
-    const mUp = () => {
-      setClick(false);
     };
 
     const mMove = (el) => {
@@ -61,6 +49,14 @@ const Cursor = () => {
         el.addEventListener('mouseover', () => setCloseImage(true));
         el.addEventListener('mouseout', () => setCloseImage(false));
       });
+      document.querySelectorAll('.next-image').forEach((el) => {
+        el.addEventListener('mouseover', () => setNextImage(true));
+        el.addEventListener('mouseout', () => setNextImage(false));
+      });
+      document.querySelectorAll('.previous-image').forEach((el) => {
+        el.addEventListener('mouseover', () => setPreviousImage(true));
+        el.addEventListener('mouseout', () => setPreviousImage(false));
+      });
       document.querySelectorAll('button').forEach((el) => {
         el.addEventListener('mouseover', () => setLinkHover(true));
         el.addEventListener('mouseout', () => setLinkHover(false));
@@ -76,9 +72,10 @@ const Cursor = () => {
     <div className={
         'cursor ' +
         (hidden ? 'c--hidden ' : '') +
-        (click ? 'c--click ' : '') +
         (openImage ? 'openImage ' : '') +
         (closeImage ? 'closeImage ' : '') +
+        (nextImage ? 'nextImage ' : '') +
+        (previousImage ? 'previousImage ' : '') +
         (linkHover ? 'linkHover ' : '') +
         (atagHover ? 'a--c--hover ' : '')
       }

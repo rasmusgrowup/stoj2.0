@@ -8,7 +8,7 @@
   position: fixed;
   transform: translate(-50%, 45%);
   width: calc(100% - 2rem);
-  z-index: 1;
+  z-index: 3;
 
   @media only screen and (min-width: $sm) {
     width: 62vw;
@@ -46,7 +46,7 @@
 }
 
 .scrollSection {
-  padding: 6rem 1rem 4rem;
+  padding: 5rem 1rem 4rem;
 
   @media only screen and (min-width: $sm) {
     padding: 4rem 1rem 2rem;
@@ -57,7 +57,7 @@
   background-color: var(--pink);
   display: block;
   margin-left: auto;
-  margin-top: 4rem;
+  margin-top: 8rem;
   max-width: 75vw;
   position: relative;
   z-index: 2;

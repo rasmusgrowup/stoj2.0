@@ -1,18 +1,11 @@
 @import "./sizes.scss";
 
-.galleryWrapper {
-  column-gap: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  min-height: 100vh;
-  padding: 6rem 1rem 2rem;
-  position: relative;
-  row-gap: 4rem;
-  z-index: 1;
+.masonryWrapper {
+  margin: 0 auto;
+  padding: 6rem 3rem;
 
-  @media only screen and (min-width: $m) {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    padding: 6rem 3rem;
+  @media (max-width: $m) {
+    padding: 6rem 0 2rem 1rem;
   }
 }
 
@@ -37,11 +30,13 @@
   background-color: #fff;
   bottom: 0;
   left: 0;
-  height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 8;
+}
+
+.singleImageWrapper * {
+  cursor: none;
 }
 
 .singleImageTitle {
@@ -66,4 +61,34 @@
 .image {
   width: auto !important;
   min-width: auto !important;
+}
+
+.prevImage a {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  left: 1rem;
+  mix-blend-mode: difference;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20vw;
+}
+
+.nextImage a {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  mix-blend-mode: difference;
+  position: fixed;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 20vw;
+}
+
+.nextWrapper,
+.previousWrapper {
+  width: 41px;
 }

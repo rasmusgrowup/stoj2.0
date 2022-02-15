@@ -6,6 +6,7 @@ import css from '../../styles/galleri.module.scss'
 import { gsap } from 'gsap';
 import React, { useEffect, useState, useRef } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Masonry from 'react-masonry-css'
 
 
 export async function getStaticProps(context) {
@@ -51,27 +52,36 @@ function Gallery({ children, billeder, backgroundHex }) {
     })
   }
 
+  console.log(billeder)
+
+  const breakpointColumnsObj = {
+    default: 3,
+    700: 2
+  };
+
   return (
     <>
       <div className={css.galleriTitle}>Galleri</div>
-        <div className={css.galleryWrapper} ref={billedeRef}>
+      <div className={css.masonryWrapper}>
+        <Masonry className='masonry' columnClassName="masonry_column" ref={billedeRef} breakpointCols={breakpointColumnsObj}>
           {billeder.results.map((billede) => (
             <div className={css.galleryItem} key={billede.id} onClick={enter}>
               <Link href={`/galleri/${billede.id}`}>
                 <a>
-                <div className={css.galleryItemInner} style={{ backgroundColor: `${billede.data.hex}`}}>
-                    <Image
-                      src={billede.data.image.url}
-                      width={billede.data.image.dimensions.width}
-                      height={billede.data.image.dimensions.height}
-                      alt={billede.data.image.alt}
-                      layout='responsive'
-                      className='fadeIn open-image' />
-                </div>
+                  <div className={css.galleryItemInner} style={{ backgroundColor: `${billede.data.hex}`}}>
+                      <Image
+                        src={billede.data.image.url}
+                        width={billede.data.image.dimensions.width}
+                        height={billede.data.image.dimensions.height}
+                        alt={billede.data.image.alt}
+                        layout='responsive'
+                        className='fadeIn open-image' />
+                  </div>
                 </a>
               </Link>
             </div>
           ))}
+        </Masonry>
       </div>
     </>
   )
