@@ -28,6 +28,7 @@ export default function Home() {
   const scrollRef = useRef(null);
   const s = gsap.utils.selector(scrollRef);
   const tl = useRef();
+  const scrubTl = useRef();
   const router = useRouter();
 
   useEffect (() => {
@@ -106,29 +107,37 @@ export default function Home() {
   useEffect(() => {
     var scrollEl = gsap.utils.toArray('.scroll');
     scrollEl.forEach((scroll) => {
-      gsap.from(scroll, {
-      scale: .6,
+      gsap.fromTo(scroll, {
+        scale: .6,
+      },
+      {
+        scale: 1,
         scrollTrigger: {
           trigger: scroll,
-          start: "top 95%",
+          start: "center bottom",
           end: "top 40%",
           scrub: true
         }
       });
     });
 
-    var fadeIn = gsap.utils.toArray('.fadeIn');
-    fadeIn.forEach((fadeIn) => {
-      gsap.from(fadeIn, {
-      opacity: 0,
+    var fadeEl = gsap.utils.toArray('.fadeIn');
+    fadeEl.forEach((fade) => {
+      gsap.fromTo(fade, {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
         scrollTrigger: {
-          trigger: fadeIn,
-          start: "top 85%",
-          end: "top 40%",
+          trigger: fade,
+          start: "center bottom",
+          end: "top 25%",
           scrub: true
         }
       });
     });
+
+    console.log(fadeEl)
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -161,6 +170,7 @@ export default function Home() {
             muted
             loop
             playsInline
+            style={{ objectFit: 'cover' }}
             width='100%'
             height='100%'
             alt=''
@@ -192,6 +202,7 @@ export default function Home() {
             muted
             loop
             playsInline
+            style={{ objectFit: 'cover' }}
             width='100%'
             height='100%'
             alt=''

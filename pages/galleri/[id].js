@@ -72,6 +72,11 @@ function Billeder({ billede, previousImage, nextImage }) {
       clipPath: 'inset(0% 0 0% 0)',
       ease: 'Power3.easeOut',
     })
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.refresh());
+    }
   }, [router])
 
   const exit = ({ currentTarget }) => {

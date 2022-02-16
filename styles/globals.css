@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: #000;
+  background-color: var(--white);
   font-family:
     'Helvetica Neue',
     -apple-system,
@@ -36,6 +36,7 @@ a {
   --red: #f00;
   --yellow: #ffb400;
   --easeInOut: cubic-bezier(0.65, 0, 0.35, 1);
+  --white: #fff;
 }
 
 .cursor {

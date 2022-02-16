@@ -44,7 +44,7 @@
 }
 
 #thirdCase {
-  display: flex;
+  height: 110vw;
   margin-left: 0;
   margin-top: 8rem;
   width: 80vw;
@@ -52,6 +52,7 @@
 
 @media only screen and (min-width: 415px) {
   #thirdCase {
+    height: 50vw;
     margin-left: 4vw;
     width: 40vw;
   }
@@ -59,7 +60,7 @@
 
 @media only screen and (min-width: 1024px) {
   #thirdCase {
-    width: 36vw;
+    width: 32vw;
   }
 }
 
@@ -133,12 +134,13 @@
 }
 
 #eightCase {
-  display: flex;
+  height: 110vw;
   width: 54vw;
 }
 
 @media only screen and (min-width: 415px) {
   #eightCase {
+    height: 36vw;
     width: 30vw;
   }
 }

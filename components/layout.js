@@ -21,12 +21,14 @@ export default function Layout({ children }) {
     <>
       <Meta />
       <Navbar />
+      <div className={css.whiteTopBar}></div>
       <CustomView condition={!isMobile}>
         <CustomCursor />
       </CustomView>
       <main className={css.mainLayout}>
         {children}
       </main>
+      <div className={css.whiteBottomBar}></div>
       <Footer />
     </>
   )

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import StudieOne from '../public/Studie_1.jpg'
 import StudieTwo from '../public/Studie_2.jpg'
 import Kid from '../public/KronstadtKid.jpg'
@@ -14,44 +15,48 @@ import React, { useRef, useState, useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default function About({ title, keywords, description }) {
+  const router = useRouter();
+  gsap.registerPlugin(ScrollTrigger);
 
-    gsap.registerPlugin(ScrollTrigger);
+  useEffect (() => {
+    var scrollAbout = gsap.utils.toArray('.scrollAbout');
+    scrollAbout.forEach((scrollAbout) => {
+      gsap.from(scrollAbout, {
+      scale: .6,
+        scrollTrigger: {
+          trigger: scrollAbout,
+          start: "top bottom",
+          end: "top center",
+          scrub: true
+        }
+      });
+    });
 
-    useEffect (() => {
+    var fadeInAbout = gsap.utils.toArray('.fadeInAbout');
+    fadeInAbout.forEach((fadeInAbout) => {
+      gsap.from(fadeInAbout, {
+      opacity: 0,
+        scrollTrigger: {
+          trigger: fadeInAbout,
+          start: "top 70%",
+          end: "top center",
+          scrub: true
+        }
+      });
+    });
 
-        var scrollAbout = gsap.utils.toArray('.scrollAbout');
-        scrollAbout.forEach((scrollAbout) => {
-            gsap.from(scrollAbout, {
-            scale: .6,
-                scrollTrigger: {
-                    trigger: scrollAbout,
-                    start: "top bottom",
-                    end: "top center",
-                    scrub: true
-                }
-            });
-        });
+    gsap.from('.imgAnim', {
+      clipPath: 'inset(100% 0 0 0)',
+      duration: 2,
+      delay: 1,
+      ease: 'Power3.easeOut',
+    });
 
-        var fadeInAbout = gsap.utils.toArray('.fadeInAbout');
-        fadeInAbout.forEach((fadeInAbout) => {
-            gsap.from(fadeInAbout, {
-            opacity: 0,
-                scrollTrigger: {
-                    trigger: fadeInAbout,
-                    start: "top 70%",
-                    end: "top center",
-                    scrub: true
-                }
-            });
-        });
-
-        gsap.from('.imgAnim', {
-            clipPath: 'inset(100% 0 0 0)',
-            duration: 2,
-            delay: 1,
-            ease: 'Power3.easeOut',
-        });
-    }, [])
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.refresh());
+    }
+  }, [router])
 
     return(
       <>

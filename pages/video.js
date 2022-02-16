@@ -1,38 +1,45 @@
 import css from '../styles/video.module.scss'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Vimeo from '../components/vimeo'
 
 export default function Video({ title, keywords, description }) {
-    gsap.registerPlugin(ScrollTrigger);
+  const router = useRouter();
+  gsap.registerPlugin(ScrollTrigger);
 
-    useEffect (() => {
-      gsap.fromTo('#videoTitle', {
-          yPercent: 100,
-        },
-        {
-          y: 0,
-          yPercent: 0,
-          duration: 2,
-          ease: 'Power3.easeInOut'
-      });
+  useEffect (() => {
+    gsap.fromTo('#videoTitle', {
+      yPercent: 100,
+    },
+    {
+      y: 0,
+      yPercent: 0,
+      duration: 2,
+      ease: 'Power3.easeInOut'
+    });
 
-      gsap.set('.vimeoFadeIn', {opacity:0})
-      var fadeIn = gsap.utils.toArray('.vimeoFadeIn');
-      fadeIn.forEach((fadeIn) => {
-        gsap.to(fadeIn, {
-        opacity: 1,
-          scrollTrigger: {
-            trigger: fadeIn,
-            start: "top 70%",
-            end: "top center",
-            scrub: true
-          }
-        });
+    gsap.set('.vimeoFadeIn', {opacity:0})
+    var fadeIn = gsap.utils.toArray('.vimeoFadeIn');
+    fadeIn.forEach((fadeIn) => {
+      gsap.to(fadeIn, {
+      opacity: 1,
+        scrollTrigger: {
+          trigger: fadeIn,
+          start: "top 70%",
+          end: "top center",
+          scrub: true
+        }
       });
-    }, [])
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.refresh());
+    }
+  }, [router])
 
   return (
     <>

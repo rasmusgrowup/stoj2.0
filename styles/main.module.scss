@@ -2,3 +2,21 @@
   background-color: white;
   z-index: 1;
 }
+
+.whiteTopBar,
+.whiteBottomBar {
+  background-color: var(--white);
+  content: '';
+  height: 69px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.whiteBottomBar {
+  bottom: 0;
+  height: 100px;
+  top: auto;
+}

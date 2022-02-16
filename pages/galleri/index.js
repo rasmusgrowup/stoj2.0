@@ -39,10 +39,10 @@ function Gallery({ children, billeder, backgroundHex }) {
         duration: 2,
         ease: 'Power3.easeInOut'
     });
-    gsap.set('.fadeIn', {
+    gsap.set('.fadeInGallery', {
       opacity: 0,
     })
-    var fadeIn = gsap.utils.toArray('.fadeIn');
+    var fadeIn = gsap.utils.toArray('.fadeInGallery');
     fadeIn.forEach((fadeIn) => {
       gsap.to(fadeIn, {
       duration: 1,
@@ -52,6 +52,7 @@ function Gallery({ children, billeder, backgroundHex }) {
           trigger: fadeIn,
           start: "top bottom",
           end: "top center",
+          scrub: true
         }
       });
     });
@@ -91,7 +92,7 @@ function Gallery({ children, billeder, backgroundHex }) {
                         height={billede.data.image.dimensions.height}
                         alt={billede.data.image.alt}
                         layout='responsive'
-                        className='fadeIn open-image' />
+                        className='fadeInGallery open-image' />
                   </div>
                 </a>
               </Link>
