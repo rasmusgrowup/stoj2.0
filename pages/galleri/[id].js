@@ -64,15 +64,13 @@ function Billeder({ billede, previousImage, nextImage }) {
   const router = useRouter()
 
   useEffect (() => {
-    gsap.set('.animSingleImage', {
-      clipPath: 'inset(100% 0 0% 0)',
-    })
-
-    gsap.to('.animSingleImage', {
-    duration: 1,
-    delay: 0.2,
-    clipPath: 'inset(0% 0 0% 0)',
-    ease: 'Power3.easeOut',
+    gsap.fromTo('.animSingleImage', {
+      clipPath: 'inset(100% 0 0% 0)'
+    },
+    {
+      duration: 1,
+      clipPath: 'inset(0% 0 0% 0)',
+      ease: 'Power3.easeOut',
     })
   }, [router])
 
