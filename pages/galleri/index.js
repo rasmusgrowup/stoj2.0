@@ -39,11 +39,11 @@ function Gallery({ children, billeder, backgroundHex }) {
         duration: 2,
         ease: 'Power3.easeInOut'
     });
-    gsap.set('.fadeInGallery', {
-      opacity: 0,
-    })
     var fadeIn = gsap.utils.toArray('.fadeInGallery');
     fadeIn.forEach((fadeIn) => {
+      gsap.set(fadeIn, {
+        opacity: 0,
+      })
       gsap.to(fadeIn, {
       duration: 1,
       delay: .3,
@@ -92,7 +92,7 @@ function Gallery({ children, billeder, backgroundHex }) {
                         height={billede.data.image.dimensions.height}
                         alt={billede.data.image.alt}
                         layout='responsive'
-                        className='fadeInGallery open-image' />
+                        className={`${css.fadeInGallery} fadeInGallery open-image`} />
                   </div>
                 </a>
               </Link>

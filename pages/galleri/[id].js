@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from 'next/link'
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Prismic from '@prismicio/client'
 import { Client } from '../../prismic-configuration'
 
@@ -62,27 +62,68 @@ export async function getStaticProps(context) {
 
 function Billeder({ billede, previousImage, nextImage }) {
   const router = useRouter()
+  const nextTl = useRef(null);
+  const previousTl = useRef(null);
+  const openTl = useRef(null);
 
   useEffect (() => {
-    gsap.fromTo('.animSingleImage', {
+    openTl.current = gsap.timeline()
+    .set('.animSingleImage', {
+      clipPath: 'inset(100% 0 0% 0)',
+      opacity: 1,
+    })
+    .fromTo('.animSingleImage', {
       clipPath: 'inset(100% 0 0% 0)'
     },
     {
-      duration: 1,
+      delay: 0.2,
+      duration: 1.4,
       clipPath: 'inset(0% 0 0% 0)',
       ease: 'Power3.easeOut',
     })
   }, [router])
 
+  const previous = ({ currentTarget }) => {
+    previousTl.current = gsap.timeline()
+      .to('.animSingleImage', {
+        duration: 0.6,
+        clipPath: 'inset(0% 0 100% 0)',
+        ease: 'Power3.easeOut',
+      })
+      .set('.animSingleImage', {
+        clipPath: 'inset(0% 0 0% 0)',
+        opacity: 0,
+      })
+      setTimeout(function() {
+        router.push(`/galleri/${previousImage.id}`);
+      }, 600)
+  }
+
+  const next = ({ currentTarget }) => {
+    nextTl.current = gsap.timeline()
+      .to('.animSingleImage', {
+        duration: 0.6,
+        clipPath: 'inset(0% 0 100% 0)',
+        ease: 'Power3.easeOut',
+      })
+      .set('.animSingleImage', {
+        clipPath: 'inset(0% 0 0% 0)',
+        opacity: 0,
+      })
+      setTimeout(function() {
+        router.push(`/galleri/${nextImage.id}`);
+      }, 600)
+  }
+
   const exit = ({ currentTarget }) => {
     gsap.to('.animSingleImage', {
-    duration: 1,
+    duration: 0.6,
     clipPath: 'inset(0% 0 100% 0)',
     ease: 'Power3.easeOut',
     })
     setTimeout(function() {
       router.push('/galleri');
-    }, 1000)
+    }, 600)
   }
 
   return (
@@ -103,17 +144,17 @@ function Billeder({ billede, previousImage, nextImage }) {
       {
         previousImage != undefined &&
         <div className={`${css.prevImage} previous-image`}>
-          <Link href={`/galleri/${previousImage.id}`}><a>
+          <span onClick={previous}>
             <div className={css.previousWrapper}><Image src={Previous} quality='100'/></div>
-          </a></Link>
+          </span>
         </div>
       }
       {
         nextImage != undefined &&
         <div className={`${css.nextImage} next-image`}>
-          <Link href={`/galleri/${nextImage.id}`}><a>
+          <span onClick={next}>
             <div className={css.nextWrapper}><Image src={Next} quality='100'/></div>
-          </a></Link>
+          </span>
         </div>
       }
     </>
