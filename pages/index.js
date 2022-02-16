@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useRef, useLayoutEffect, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -21,36 +22,68 @@ import tenthCase from '../public/Mad2.jpg'
 import eleventhCase from '../public/Femina4.jpg'
 
 export default function Home() {
-
+  const logoRef = useRef(null);
+  const logoAnim = gsap.utils.selector(logoRef);
   const [animateIntro, setAnimateIntro] = useState(true);
-  const tl = gsap.timeline({ delay: 1, defaults: { ease: 'Power3.easeInOut' }});
-  gsap.registerPlugin(ScrollTrigger);
+  const scrollRef = useRef(null);
+  const s = gsap.utils.selector(scrollRef);
+  const tl = useRef();
+  const router = useRouter();
 
   useEffect (() => {
+    tl.current = gsap.timeline({ delay: 1, defaults: { ease: 'Power3.easeInOut' }});
+
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
-      setAnimateIntro(true);
-      window.sessionStorage.setItem("firstLoadDone", 1)
-      tl
-        .from('#firstCase', {
+      gsap.fromTo(logoAnim('.logoAnim'), {
+        yPercent: 110,
+      },
+      {
+        y: 0,
+        yPercent: 0,
+        duration: 2.5,
+        ease: 'Power3.easeInOut'
+      });
+      gsap.fromTo('.titleAnim', {
+          yPercent: 100,
+        },
+        {
+          y: 0,
+          yPercent: 0,
+          duration: 2,
+          delay: 1,
+          ease: 'Power3.easeInOut'
+      });
+      tl.current.delay(2)
+        .from(s('#firstCase'), {
           duration: 2,
           clipPath: 'inset(100% 0 0 0)',
           ease: 'Power3.easeInOut',
         })
-        .from('#secondCase', {
+        .from(s('#secondCase'), {
           duration: 2,
           clipPath: 'inset(100% 0 0 0)',
           ease: 'Power3.easeInOut',
         }, '-=1.45');
     } else {
-      setAnimateIntro(false);
-      gsap.set('#firstCase', {
-        clipPath: 'inset(0% 0 0 0)',
+      gsap.set(logoAnim('.logoAnim'), {
+        y: 0,
+        yPercent: 0,
       });
-      gsap.set('#secondCase', {
-        clipPath: 'inset(0% 0 0 0)',
-      })
+      tl.current
+        .from(s('#firstCase'), {
+          duration: 1.5,
+          clipPath: 'inset(100% 0 0 0)',
+          ease: 'Power3.easeInOut',
+        })
+        .from(s('#secondCase'), {
+          duration: 1.5,
+          clipPath: 'inset(100% 0 0 0)',
+          ease: 'Power3.easeInOut',
+        }, '-=1.45');
     }
   }, [])
+
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     var scrollEl = gsap.utils.toArray('.scroll');
@@ -82,17 +115,19 @@ export default function Home() {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     }
-  }, [])
+  }, [router])
 
   return (
     <>
-      <div className={css.logo}>
-        <Image src={Logo} layout='responsive' alt='logo' />
+      <div className={css.logo} ref={logoRef}>
+        <div className={`${css.logoInner} logoAnim`}><Image src={Logo} layout='responsive' alt='logo' /></div>
       </div>
 
-      <div className={css.indexTitle}><span className={css.indexTitleInner} id="indexTitle">Projekter</span></div>
+      <div className={css.indexTitle}>
+        <span className={`${css.indexTitleInner} titleAnim`} id="indexTitle">Projekter</span>
+      </div>
 
-      <section className={css.scrollSection}>
+      <section className={css.scrollSection} ref={scrollRef}>
         <div className={`${css.scroll} scroll`} id="firstCase" style={{ backgroundColor: '#de7cb7' }}>
           <Image src={firstCase} layout="responsive" className={`fadeIn`} priority='true' alt=''/>
         </div>

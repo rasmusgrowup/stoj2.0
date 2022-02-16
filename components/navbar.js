@@ -1,17 +1,34 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { gsap } from 'gsap';
 import css from '../styles/nav.module.scss'
 import Arrow from '../public/arrow.svg'
 
 export default function Navbar() {
-  const [isActive, setActive] = useState("false");
-  const handleToggle = () => {
-      setActive(!isActive);
-  };
-  const [tl] = useState(gsap.timeline({ paused: true }));
+  const navRef = useRef(null);
+  useEffect(() => {
+    if (window.sessionStorage.getItem("firstLoadDone") === null) {
+      gsap.fromTo(navRef.current, {
+          opacity: 0,
+          y: -50
+        },
+        {
+          ease: 'Power3.easeInOut',
+          delay: 1,
+          duration: 2,
+          opacity: 1,
+          y: 0
+        });
+    } else {
+      gsap.set(navRef.current, { opacity: 1 })
+    }
+  }, [])
 
+
+  const [isActive, setActive] = useState("false");
+  const handleToggle = () => {setActive(!isActive)};
+  const [tl] = useState(gsap.timeline({ paused: true }));
   useEffect(() => {
       tl.to('.menu', {
           xPercent: -100,
@@ -32,7 +49,7 @@ export default function Navbar() {
 
   return (
   <>
-    <nav className={css.mainNav}>
+    <nav className={css.mainNav} ref={navRef}>
       <div className={css.socialLinks}>
         <ul>
           <li>

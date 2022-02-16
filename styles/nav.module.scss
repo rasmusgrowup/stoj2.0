@@ -5,9 +5,10 @@
   justify-content: space-between;
   left: 0;
   mix-blend-mode: difference;
+  opacity: 0;
+  padding: 1rem;
   position: fixed;
   top: 0;
-  padding: 1rem;
   width: 100%;
   z-index: 5;
 }
