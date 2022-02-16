@@ -37,7 +37,6 @@ export default function Video({ title, keywords, description }) {
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      ScrollTrigger.getAll().forEach((trigger) => trigger.refresh());
     }
   }, [router])
 

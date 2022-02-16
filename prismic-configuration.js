@@ -1,7 +1,7 @@
 import Prismic from '@prismicio/client';
 
 export const apiEndpoint = "https://stoj-gallery.cdn.prismic.io/api/v2";
-export const accessToken = "MC5ZU1luVUJBQUFCOEFmTm9O.C--_vXTvv70_Ve-_vXbvv71k77-977-977-9Ye-_vXfvv71e77-9Ze-_vXh_XypcTkFZ77-977-977-9";
+export const accessToken = process.env.PRISMIC_API_TOKEN
 
 // creating a prismic client  object
 

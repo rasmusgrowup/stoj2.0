@@ -54,7 +54,6 @@ export default function About({ title, keywords, description }) {
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      ScrollTrigger.getAll().forEach((trigger) => trigger.refresh());
     }
   }, [router])
 
