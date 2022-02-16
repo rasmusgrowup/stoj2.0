@@ -69,6 +69,16 @@ export default function Home() {
         y: 0,
         yPercent: 0,
       });
+      gsap.fromTo('.titleAnim', {
+          yPercent: 100,
+        },
+        {
+          y: 0,
+          yPercent: 0,
+          duration: 2,
+          delay: 0,
+          ease: 'Power3.easeInOut'
+      });
       tl.current
         .from(s('#firstCase'), {
           duration: 1.5,

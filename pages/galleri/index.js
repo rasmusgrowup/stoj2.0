@@ -2,6 +2,7 @@ import Prismic from '@prismicio/client'
 import { Client } from '../../prismic-configuration'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import css from '../../styles/galleri.module.scss'
 import { gsap } from 'gsap';
 import React, { useEffect, useState, useRef } from 'react';
@@ -22,13 +23,24 @@ export async function getStaticProps(context) {
 }
 
 function Gallery({ children, billeder, backgroundHex }) {
-
+  const titleRef = useRef(null);
+  const titleAnim = gsap.utils.selector(titleRef);
   const billedeRef = useRef();
+  const router = useRouter();
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect (() => {
+    gsap.fromTo('#galleyTitle', {
+        yPercent: 100,
+      },
+      {
+        y: 0,
+        yPercent: 0,
+        duration: 2,
+        ease: 'Power3.easeInOut'
+    });
     gsap.set('.fadeIn', {
-        opacity: 0,
+      opacity: 0,
     })
     var fadeIn = gsap.utils.toArray('.fadeIn');
     fadeIn.forEach((fadeIn) => {
@@ -43,7 +55,11 @@ function Gallery({ children, billeder, backgroundHex }) {
         }
       });
     });
-  }, [])
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    }
+  }, [router])
 
   const enter = () => {
     gsap.to(billedeRef.current, {
@@ -52,8 +68,6 @@ function Gallery({ children, billeder, backgroundHex }) {
     })
   }
 
-  console.log(billeder)
-
   const breakpointColumnsObj = {
     default: 3,
     700: 2
@@ -61,7 +75,9 @@ function Gallery({ children, billeder, backgroundHex }) {
 
   return (
     <>
-      <div className={css.galleriTitle}>Galleri</div>
+      <div className={css.galleriTitle}>
+        <div className={css.titleInner} id='galleyTitle'>Galleri</div>
+      </div>
       <div className={css.masonryWrapper}>
         <Masonry className='masonry' columnClassName="masonry_column" ref={billedeRef} breakpointCols={breakpointColumnsObj}>
           {billeder.results.map((billede) => (

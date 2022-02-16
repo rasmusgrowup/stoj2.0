@@ -9,19 +9,29 @@ export default function Video({ title, keywords, description }) {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect (() => {
-        gsap.set('.vimeoFadeIn', {opacity:0})
-        var fadeIn = gsap.utils.toArray('.vimeoFadeIn');
-        fadeIn.forEach((fadeIn) => {
-            gsap.to(fadeIn, {
-            opacity: 1,
-                scrollTrigger: {
-                    trigger: fadeIn,
-                    start: "top 70%",
-                    end: "top center",
-                    scrub: true
-                }
-            });
+      gsap.fromTo('#videoTitle', {
+          yPercent: 100,
+        },
+        {
+          y: 0,
+          yPercent: 0,
+          duration: 2,
+          ease: 'Power3.easeInOut'
+      });
+
+      gsap.set('.vimeoFadeIn', {opacity:0})
+      var fadeIn = gsap.utils.toArray('.vimeoFadeIn');
+      fadeIn.forEach((fadeIn) => {
+        gsap.to(fadeIn, {
+        opacity: 1,
+          scrollTrigger: {
+            trigger: fadeIn,
+            start: "top 70%",
+            end: "top center",
+            scrub: true
+          }
         });
+      });
     }, [])
 
   return (
@@ -33,7 +43,7 @@ export default function Video({ title, keywords, description }) {
         <title>{title}</title>
       </Head>
       <section className={css.videoSection}>
-        <div className={css.videoTitle}>Video</div>
+        <div className={css.videoTitle}><div className={css.titleInner} id='videoTitle'>Video</div></div>
         <div className={css.videoGalleryWrapper}>
           <Vimeo id='first' vimeoId='388249746' bgColor='black' background='false'/>
           <Vimeo id='second' vimeoId='388259588' bgColor='black' background='false'/>
