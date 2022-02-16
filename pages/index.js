@@ -34,6 +34,8 @@ export default function Home() {
     tl.current = gsap.timeline({ delay: 1, defaults: { ease: 'Power3.easeInOut' }});
 
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
+      gsap.set(logoAnim('.logoAnim'), { opacity: 1 })
+      gsap.set('.titleAnim', { opacity: 1 })
       gsap.fromTo(logoAnim('.logoAnim'), {
         yPercent: 110,
       },
@@ -54,6 +56,8 @@ export default function Home() {
           ease: 'Power3.easeInOut'
       });
       tl.current.delay(2)
+        .set(s('#firstCase'), { opacity: 1 })
+        .set(s('#secondCase'), { opacity: 1})
         .from(s('#firstCase'), {
           duration: 2,
           clipPath: 'inset(100% 0 0 0)',
@@ -65,6 +69,8 @@ export default function Home() {
           ease: 'Power3.easeInOut',
         }, '-=1.45');
     } else {
+      gsap.set(logoAnim('.logoAnim'), { opacity: 1 })
+      gsap.set('.titleAnim', { opacity: 1 })
       gsap.set(logoAnim('.logoAnim'), {
         y: 0,
         yPercent: 0,
@@ -80,6 +86,8 @@ export default function Home() {
           ease: 'Power3.easeInOut'
       });
       tl.current
+        .set(s('#firstCase'), { opacity: 1 })
+        .set(s('#secondCase'), { opacity: 1})
         .from(s('#firstCase'), {
           duration: 1.5,
           clipPath: 'inset(100% 0 0 0)',

@@ -11,6 +11,10 @@
   width: calc(100% - 2rem);
   z-index: 3;
 
+  .logoInner {
+    opacity: 0;
+  }
+
   @media only screen and (min-width: $sm) {
     width: 62vw;
   }
@@ -35,6 +39,7 @@
 
   .indexTitleInner {
     display: block;
+    opacity: 0;
   }
 }
 
