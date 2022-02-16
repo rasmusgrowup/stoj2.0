@@ -65,23 +65,26 @@ function Billeder({ billede, previousImage, nextImage }) {
   const nextTl = useRef(null);
   const previousTl = useRef(null);
   const openTl = useRef(null);
+  const image = useRef(null);
 
-  useEffect (() => {
-    openTl.current = gsap.timeline()
-    .set('.animSingleImage', {
-      clipPath: 'inset(100% 0 0% 0)',
-      opacity: 1,
-    })
-    .fromTo('.animSingleImage', {
-      clipPath: 'inset(100% 0 0% 0)'
-    },
-    {
-      delay: 0.2,
-      duration: 1.4,
-      clipPath: 'inset(0% 0 0% 0)',
-      ease: 'Power3.easeOut',
-    })
-  }, [router])
+  const handleLoad = (e) => {
+    if (e.target.srcset) {
+      openTl.current = gsap.timeline()
+      .set('.animSingleImage', {
+        clipPath: 'inset(100% 0 0% 0)',
+        opacity: 1,
+      })
+      .fromTo('.animSingleImage', {
+        clipPath: 'inset(100% 0 0% 0)'
+      },
+      {
+        delay: 0.2,
+        duration: 1.4,
+        clipPath: 'inset(0% 0 0% 0)',
+        ease: 'Power3.easeOut',
+      })
+    }
+  }
 
   const previous = ({ currentTarget }) => {
     previousTl.current = gsap.timeline()
@@ -132,6 +135,7 @@ function Billeder({ billede, previousImage, nextImage }) {
         <h1 className={css.singleImageTitle}>{billede.data.title}</h1>
         <div className={`${css.singleImageInner} animSingleImage close-image`}>
           <Image
+            onLoad={handleLoad}
             src={billede.data.image.url}
             alt={billede.data.image.alt}
             layout='fill'
