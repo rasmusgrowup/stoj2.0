@@ -6,28 +6,9 @@ import css from '../styles/nav.module.scss'
 import Arrow from '../public/arrow.svg'
 
 export default function Navbar() {
-  const navRef = useRef(null);
-  useEffect(() => {
-    if (window.sessionStorage.getItem("firstLoadDone") === null) {
-      gsap.fromTo(navRef.current, {
-          opacity: 0,
-          y: -50
-        },
-        {
-          ease: 'Power3.easeInOut',
-          delay: 1,
-          duration: 2,
-          opacity: 1,
-          y: 0
-        });
-    } else {
-      gsap.set(navRef.current, { opacity: 1 })
-    }
-  }, [])
-
-
   const [isActive, setActive] = useState("false");
   const handleToggle = () => {setActive(!isActive)};
+
   const [tl] = useState(gsap.timeline({ paused: true }));
   useEffect(() => {
       tl.to('.menu', {
@@ -49,7 +30,7 @@ export default function Navbar() {
 
   return (
   <>
-    <nav className={css.mainNav} ref={navRef}>
+    <nav className={css.mainNav}>
       <div className={css.socialLinks}>
         <ul>
           <li>
@@ -73,7 +54,7 @@ export default function Navbar() {
       <ul className={css.menuList} onClick={click}>
         <li>
           <Link href="/">
-            <a>Projekter</a>
+            <a>Udvalgte</a>
           </Link>
         </li>
         <li>

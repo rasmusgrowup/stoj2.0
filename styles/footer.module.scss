@@ -1,11 +1,13 @@
 @import "./sizes.scss";
 
 .mainFooter {
-  background-color: white;
+  //background-color: white;
   padding: 1rem;
   padding-bottom: 3rem;
+  padding-top: 3rem;
   position: relative;
   width: 100%;
+  z-index: 0;
 
   a:hover {
     color: var(--pink);
@@ -16,6 +18,11 @@
   bottom: 1rem;
   position: absolute;
   right: 1rem;
+
+  @media (min-width: $m) {
+    bottom: 2rem;
+    right: 2rem;
+  }
 }
 
 .mail {

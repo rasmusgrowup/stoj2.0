@@ -114,7 +114,7 @@ export default function Home() {
         scale: 1,
         scrollTrigger: {
           trigger: scroll,
-          start: "center bottom",
+          start: "top bottom",
           end: "top 40%",
           scrub: true
         }
@@ -131,7 +131,7 @@ export default function Home() {
         scrollTrigger: {
           trigger: fade,
           start: "center bottom",
-          end: "top 25%",
+          end: "top center",
           scrub: true
         }
       });
@@ -151,7 +151,7 @@ export default function Home() {
       </div>
 
       <div className={css.indexTitle}>
-        <span className={`${css.indexTitleInner} titleAnim`} id="indexTitle">Projekter</span>
+        <span className={`${css.indexTitleInner} titleAnim`} id="indexTitle">Udvalgte</span>
       </div>
 
       <section className={css.scrollSection} ref={scrollRef}>
@@ -160,7 +160,7 @@ export default function Home() {
         </div>
 
         <div className={`${css.scroll} scroll`} id="secondCase" style={{ backgroundColor: '#0a0a0a' }}>
-          <Image src={secondCase} layout="responsive" className={`fadeIn`} alt=''/>
+          <Image src={fourthCase} layout="responsive" className={`fadeIn`} alt=''/>
         </div>
 
         <div className={`${css.scroll} scroll`} id="thirdCase" style={{ backgroundColor: 'grey' }}>

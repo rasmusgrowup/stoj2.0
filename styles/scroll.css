@@ -1,6 +1,6 @@
 #firstCase {
   margin-right: auto;
-  margin-left: 0;
+  margin-left: 0.5rem;
   margin-top: 0;
   opacity: 0;
   width: 75vw;
@@ -36,10 +36,10 @@
 
 @media only screen and (min-width: 1024px) {
   #secondCase {
-    margin-top: -2rem;
+    margin-top: -25rem;
     margin-right: 3rem;
     margin-bottom: -4rem;
-    width: 30vw;
+    width: 24vw;
   }
 }
 
@@ -134,7 +134,7 @@
 }
 
 #eightCase {
-  height: 110vw;
+  height: 80vw;
   width: 54vw;
 }
 

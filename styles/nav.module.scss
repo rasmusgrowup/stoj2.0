@@ -5,7 +5,6 @@
   justify-content: space-between;
   left: 0;
   mix-blend-mode: difference;
-  opacity: 0;
   padding: 1rem;
   position: fixed;
   top: 0;
@@ -21,9 +20,13 @@
   position: fixed;
   top: 0;
   transform: translateX(100%);
-  padding: 4rem 1.25rem;
+  padding: 4rem 1rem;
   width: 100%;
   z-index: 4;
+
+  @media (min-width: $m) {
+    padding: 4rem 1.25rem;
+  }
 }
 
 .listTel {
