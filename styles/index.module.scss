@@ -1,10 +1,10 @@
-@import "./sizes.scss";
+@import 'sizes.scss';
 
 .logo {
   align-items: center;
   display: flex;
   left: 0;
-  height: 92vh;
+  height: 100%;
   justify-content: center;
   mix-blend-mode: difference;
   overflow: hidden;
@@ -12,14 +12,13 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 0;
+  z-index: 3;
 
   @media only screen and (min-width: $m) {
     height: 100%;
   }
 
   .logoInner {
-    opacity: 0;
     width: calc(100% - 2rem);
 
     @media only screen and (min-width: $sm) {
@@ -27,7 +26,7 @@
     }
 
     @media only screen and (min-width: $m) {
-      width: 45vw;
+      width: 44vw;
     }
   }
 }
@@ -35,35 +34,19 @@
 .indexTitle {
   bottom: 1rem;
   color: #fff;
-  font-size: clamp(26px, 12vw, 4em);
+  color: black;
+  font-size: max(26px, 6vw);
   font-weight: bold;
   left: 1rem;
   letter-spacing: -0.05em;
   line-height: 1.2;
-  mix-blend-mode: difference;
-  overflow: hidden;
+  //mix-blend-mode: difference;
+  //overflow: hidden;
   position: fixed;
-  z-index: 3;
+  z-index: 0;
 
   .indexTitleInner {
     display: block;
-    opacity: 0;
-  }
-}
-
-.introSection {
-  padding: 1rem 0;
-
-  @media only screen and (min-width: $sm) {
-    padding: 2rem;
-  }
-}
-
-.scrollSection {
-  padding: 5rem 0 4rem;
-
-  @media only screen and (min-width: $sm) {
-    padding: 4rem 0 2rem;
   }
 }
 
@@ -71,50 +54,275 @@
   background-color: var(--pink);
   display: block;
   margin-left: auto;
-  margin-top: 8rem;
-  max-width: 75vw;
+  margin-top: 9rem;
+  max-width: 98vw;
   position: relative;
   z-index: 2;
 }
 
-.heading {
-  display: block;
+.maze {
+  margin-right: auto;
   margin-left: auto;
-  margin-top: 14rem;
-  margin-bottom: 4rem;
+  margin-top: 7.5rem;
+  width: 80vw;
+  z-index: 0;
 
-  h2 {
-    margin-bottom: 0.5rem;
+  @media only screen and (min-width: $m) {
+    margin-right: auto;
+    margin-left: 12vw;
+    margin-top: 0;
+    width: 40vw;
   }
+}
 
-  p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    margin: 0;
-  }
+.gurkemeje {
+  margin-right: auto;
+  margin-left: 1rem;
+  margin-top: 4rem;
+  width: 75vw;
+  z-index: 0;
 
-  .headingContact {
-    display: inline-flex;
-    font-size: 1.2em;
+  @media only screen and (min-width: $m) {
+    margin-left: 12vw;
     margin-top: 1rem;
-    position: relative;
+    width: 48vw;
+  }
+}
 
-    &::after {
-      content: '>';
-      margin-left: 0.5rem;
-    }
+.model {
+  margin-right: 1rem;
+  margin-left: auto;
+  width: 60vw;
+  z-index: 0;
 
-    &:hover {
-      color: var(--pink);
-    }
+  @media only screen and (min-width: $m) {
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-top: -6rem;
+    width: 20vw;
+  }
+}
 
-    &::before {
-      bottom: -2px;
-      border-bottom: 2px solid black;
-      display: block;
-      content: '';
-      position: absolute;
-      width: 100%;
-    }
+.borster {
+  margin-right: 1rem;
+  margin-left: auto;
+  margin-top: 9rem;
+  width: 50vw;
+  z-index: 0;
+
+  @media only screen and (min-width: $m) {
+    margin-left: auto;
+    margin-right: 10vw;
+    margin-top: 3rem;
+    width: 18vw;
+  }
+}
+
+.youngskin {
+  margin-right: auto;
+  margin-left: 1rem;
+  margin-top: 9rem;
+  width: 65vw;
+  z-index: 0;
+
+  @media only screen and (min-width: $m) {
+    margin-left: 2rem;
+    margin-top: 6rem;
+    width: 36vw;
+  }
+}
+
+.scrub {
+  margin-right: auto;
+  margin-left: 1rem;
+  width: 75vw;
+  z-index: 0;
+
+  @media only screen and (min-width: $m) {
+    margin-left: 8vw;
+    margin-top: 4rem;
+    width: 45vw;
+  }
+}
+
+.rum {
+  margin-right: 1rem;
+  margin-left: auto;
+  width: 75vw;
+  z-index: 0;
+
+  @media only screen and (min-width: $m) {
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-top: -4rem;
+    width: 24vw;
+  }
+}
+
+.vase {
+  margin-right: auto;
+  margin-left: 1rem;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: auto;
+    margin-right: 12vw;
+    margin-top: 8rem;
+    width: 60vw;
+  }
+}
+
+.hund {
+  margin-right: auto;
+  margin-left: auto;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: 2rem;
+    margin-right: auto;
+    margin-top: -4rem;
+    width: 18vw;
+  }
+}
+
+.lemonade {
+  margin-right: 1rem;
+  margin-left: auto;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    width: 30vw;
+  }
+}
+
+.kvinde {
+  margin-right: auto;
+  margin-left: 1rem;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: 26vw;
+    margin-right: auto;
+    margin-top: 2rem;
+    width: 34vw;
+  }
+}
+
+.pige {
+  margin-right: 1rem;
+  margin-left: auto;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: 2rem;
+    margin-right: auto;
+    margin-top: 4rem;
+    width: 16vw;
+  }
+}
+
+.worker {
+  margin-right: auto;
+  margin-left: auto;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-top: 4rem;
+    width: 25vw;
+  }
+}
+
+.stol {
+  margin-right: auto;
+  margin-left: 1rem;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: 2rem;
+    margin-right: auto;
+    margin-top: 0;
+    width: 40vw;
+  }
+}
+
+.rum2 {
+  margin-right: auto;
+  margin-left: auto;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-top: 4rem;
+    width: 25vw;
+  }
+}
+
+.organic {
+  margin-right: auto;
+  margin-left: 1rem;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: 10vw;
+    margin-right: auto;
+    margin-top: -8rem;
+    width: 32vw;
+  }
+}
+
+.is {
+  margin-right: 1rem;
+  margin-left: auto;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: auto;
+    margin-right: 20vw;
+    margin-top: 6rem;
+    width: 25vw;
+  }
+}
+
+.schaf {
+  margin-right: auto;
+  margin-left: 1rem;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: 10vw;
+    margin-right: auto;
+    margin-top: 6rem;
+    width: 22vw;
+  }
+}
+
+.antiage {
+  margin-right: 1rem;
+  margin-left: auto;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-top: -4rem;
+    width: 36vw;
   }
 }
