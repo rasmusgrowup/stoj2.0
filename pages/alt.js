@@ -92,7 +92,7 @@ export default function Home() {
 
         <div className={`${css.scroll} ${css.maze} scroll`} style={{ backgroundColor: '#EFBD6A' }}>
           <Image
-            src={Gurkemeje}
+            src={Maze}
             layout="responsive"
             className="fadeIn"
             priority='true'
