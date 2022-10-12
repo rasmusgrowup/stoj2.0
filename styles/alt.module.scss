@@ -12,7 +12,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 0;
+  z-index: 3;
 
   @media only screen and (min-width: $m) {
     height: 100%;
@@ -60,116 +60,118 @@
   z-index: 2;
 }
 
-.maze {
+.studio {
   margin-right: auto;
   margin-left: auto;
-  margin-top: 7.5rem;
-  width: 80vw;
-  z-index: 0;
-
-  @media only screen and (min-width: $m) {
-    margin-right: auto;
-    margin-left: 12vw;
-    margin-top: 0;
-    width: 40vw;
-  }
-}
-
-.gurkemeje {
-  margin-right: auto;
-  margin-left: 1rem;
-  margin-top: 4rem;
-  width: 75vw;
-  z-index: 0;
-
-  @media only screen and (min-width: $m) {
-    margin-left: 12vw;
-    margin-top: 1rem;
-    width: 48vw;
-  }
-}
-
-.model {
-  margin-right: 1rem;
-  margin-left: auto;
-  width: 60vw;
+  margin-top: 6rem;
+  width: 90vw;
   z-index: 0;
 
   @media only screen and (min-width: $m) {
     margin-left: auto;
-    margin-right: 2rem;
+    margin-right: 16vw;
+    margin-top: 0;
+    width: 38vw;
+  }
+}
+
+.studio2 {
+  margin-left: 1rem;
+  margin-right: auto;
+  width: 60vw;
+  z-index: 0;
+
+  @media only screen and (min-width: $m) {
+    margin-rigth: auto;
+    margin-left: 6rem;
     margin-top: -6rem;
     width: 20vw;
   }
 }
 
-.borster {
-  margin-right: 1rem;
+.studio3 {
   margin-left: auto;
-  margin-top: 9rem;
-  width: 50vw;
-  z-index: 0;
-
-  @media only screen and (min-width: $m) {
-    margin-left: auto;
-    margin-right: 10vw;
-    margin-top: 3rem;
-    width: 18vw;
-  }
-}
-
-.youngskin {
-  margin-right: auto;
-  margin-left: 1rem;
+  margin-right: 1rem;
   margin-top: 9rem;
   width: 65vw;
   z-index: 0;
 
   @media only screen and (min-width: $m) {
-    margin-left: 2rem;
+    margin-left: auto;
+    margin-right: 2rem;
     margin-top: 6rem;
     width: 36vw;
   }
 }
 
-.scrub {
-  margin-right: auto;
+.studio4 {
   margin-left: 1rem;
-  width: 75vw;
+  margin-right: auto;
+  margin-top: 9rem;
+  width: 50vw;
   z-index: 0;
 
   @media only screen and (min-width: $m) {
-    margin-left: 8vw;
-    margin-top: 4rem;
+    margin-right: auto;
+    margin-left: 10vw;
+    margin-top: 3rem;
+    width: 18vw;
+  }
+}
+
+.studio5 {
+  margin-right: auto;
+  margin-left: auto;
+  width: 90vw;
+  z-index: 0;
+
+  @media only screen and (min-width: $m) {
+    margin-right: 8vw;
+    margin-top: -4rem;
     width: 45vw;
   }
 }
 
-.rum {
-  margin-right: 1rem;
-  margin-left: auto;
+.bymickleit {
+  display: flex;
+  margin-left: 1rem;
+  margin-right: auto;
   width: 75vw;
   z-index: 0;
 
   @media only screen and (min-width: $m) {
-    margin-left: auto;
-    margin-right: 2rem;
-    margin-top: -4rem;
+    margin-right: auto;
+    margin-left: 2rem;
+    margin-top: 4rem;
     width: 24vw;
   }
 }
 
-.vase {
+.studio6 {
   margin-right: auto;
-  margin-left: 1rem;
+  margin-left: auto;
   width: 75vw;
   z-index: 2;
 
   @media only screen and (min-width: $m) {
     margin-left: auto;
-    margin-right: 12vw;
-    margin-top: 8rem;
-    width: 60vw;
+    margin-right: 2vw;
+    margin-top: -4rem;
+    width: 26vw;
+  }
+}
+
+.studio7 {
+  margin-right: 1rem;
+  margin-left: auto;
+  width: 65vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: 30rem;
+    margin-right: auto;
+    margin-top: -2rem;
+    width: 22vw;
   }
 }
 
@@ -182,12 +184,12 @@
   @media only screen and (min-width: $m) {
     margin-left: 2rem;
     margin-right: auto;
-    margin-top: -4rem;
+    margin-top: 2rem;
     width: 18vw;
   }
 }
 
-.lemonade {
+.studio9 {
   margin-right: 1rem;
   margin-left: auto;
   width: 75vw;
@@ -197,25 +199,11 @@
     margin-left: auto;
     margin-right: 2rem;
     margin-top: 2rem;
-    width: 30vw;
+    width: 50vw;
   }
 }
 
-.kvinde {
-  margin-right: auto;
-  margin-left: 1rem;
-  width: 75vw;
-  z-index: 2;
-
-  @media only screen and (min-width: $m) {
-    margin-left: 26vw;
-    margin-right: auto;
-    margin-top: 2rem;
-    width: 34vw;
-  }
-}
-
-.pige {
+.studio10 {
   margin-right: 1rem;
   margin-left: auto;
   width: 75vw;
@@ -225,41 +213,42 @@
     margin-left: 2rem;
     margin-right: auto;
     margin-top: 4rem;
-    width: 16vw;
+    width: 21vw;
   }
 }
 
-.worker {
+.studiovideo {
+  display: flex;
+  margin-left: 1rem;
   margin-right: auto;
-  margin-left: auto;
   width: 75vw;
-  z-index: 2;
+  z-index: 0;
 
   @media only screen and (min-width: $m) {
     margin-left: auto;
-    margin-right: 2rem;
-    margin-top: 4rem;
-    width: 25vw;
+    margin-right: 1rem;
+    margin-top: -2rem;
+    width: 24vw;
   }
 }
 
-.stol {
+.studio11 {
   margin-right: auto;
   margin-left: 1rem;
   width: 75vw;
   z-index: 2;
 
   @media only screen and (min-width: $m) {
-    margin-left: 2rem;
     margin-right: auto;
-    margin-top: 0;
-    width: 40vw;
+    margin-left: 4rem;
+    margin-top: 4rem;
+    width: 25vw;
   }
 }
 
-.rum2 {
+.studio12 {
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 1rem;
   width: 75vw;
   z-index: 2;
 
@@ -267,11 +256,25 @@
     margin-left: auto;
     margin-right: 2rem;
     margin-top: 4rem;
+    width: 45vw;
+  }
+}
+
+.studio13 {
+  margin-right: auto;
+  margin-left: auto;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: 2rem;
+    margin-right: auto;
+    margin-top: 4rem;
     width: 25vw;
   }
 }
 
-.organic {
+.studio14 {
   margin-right: auto;
   margin-left: 1rem;
   width: 75vw;
@@ -281,11 +284,11 @@
     margin-left: 10vw;
     margin-right: auto;
     margin-top: -8rem;
-    width: 32vw;
+    width: 27vw;
   }
 }
 
-.is {
+.studio15 {
   margin-right: 1rem;
   margin-left: auto;
   width: 75vw;
@@ -299,7 +302,7 @@
   }
 }
 
-.schaf {
+.studio16 {
   margin-right: auto;
   margin-left: 1rem;
   width: 75vw;
@@ -313,7 +316,7 @@
   }
 }
 
-.antiage {
+.studio17 {
   margin-right: 1rem;
   margin-left: auto;
   width: 75vw;
@@ -323,6 +326,35 @@
     margin-left: auto;
     margin-right: 2rem;
     margin-top: -4rem;
-    width: 36vw;
+    width: 27vw;
+  }
+}
+
+.studio18 {
+  margin-right: auto;
+  margin-left: 1rem;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: 2rem;
+    margin-right: auto;
+    margin-top: 4rem;
+    width: 45vw;
+  }
+}
+
+.studio19 {
+  margin-right: auto;
+  margin-left: 1rem;
+  width: 75vw;
+  z-index: 2;
+
+  @media only screen and (min-width: $m) {
+    margin-left: 1rem;
+    margin-right: auto;
+    margin-top: -6rem;
+    margin-bottom: 6rem;
+    width: 30vw;
   }
 }

@@ -1,6 +1,5 @@
 // Defaults
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 // React
@@ -14,25 +13,25 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import css from '../styles/alt.module.scss'
 import Logo from '../public/logo_white.svg'
 
-import Gurkemeje from '../public/udvalgte/gurkemeje.jpg'
-import Maze from '../public/udvalgte/mazeClean.jpg'
-import Borster from '../public/udvalgte/boerster.jpg'
-import Youngskin from '../public/udvalgte/youngskin.jpg'
-import Model from '../public/udvalgte/model.jpg'
-import Scrub from '../public/udvalgte/scrub.jpg'
-import Rum from '../public/udvalgte/rum.jpg'
-import Vase from '../public/udvalgte/vase.jpg'
-import Hund from '../public/udvalgte/hund.jpg'
-import Lemonade from '../public/udvalgte/lemonade.jpg'
-import Kvinde from '../public/udvalgte/kvinde.jpg'
-import Worker from '../public/udvalgte/worker.jpg'
-import Stol from '../public/udvalgte/stol.jpg'
-import Pige from '../public/udvalgte/pige.jpg'
-import Rum2 from '../public/udvalgte/rum2.jpg'
-import Organic from '../public/udvalgte/organic.jpg'
-import Is from '../public/udvalgte/is.jpg'
-import Schaf from '../public/udvalgte/schaf.jpg'
-import AntiAge from '../public/udvalgte/anti_age_matas.jpg'
+import Studio from '../public/Studie_1.jpg'
+import Studio2 from '../public/studio/001.jpg'
+import Studio3 from '../public/studio/002.jpg'
+import Studio4 from '../public/studio/005.jpg'
+import Studio5 from '../public/studio/havnen_nick-kopi.jpg'
+import Studio6 from '../public/studio/IMG_0072.jpg'
+import Studio7 from '../public/studio/IMG_0561.jpg'
+import Studio8 from '../public/studio/IMG_1584.jpg'
+import Studio9 from '../public/studio/IMG_1257.jpg'
+import Studio10 from '../public/studio/IMG_1968.jpg'
+import Studio11 from '../public/studio/IMG_3895.jpg'
+import Studio12 from '../public/studio/studiet_bagom-kopi.jpg'
+import Studio13 from '../public/studio/studiet_bagom_twelveinch-kopi.jpg'
+import Studio14 from '../public/studio/IMG_3981.jpg'
+import Studio15 from '../public/studio/IMG_4026.jpg'
+import Studio16 from '../public/studio/IMG_4303.jpg'
+import Studio17 from '../public/studio/IMG_4368.jpg'
+import Studio18 from '../public/studio/studiet_jeppe_rie-kopi.jpg'
+import Studio19 from '../public/studio/havnen_bagom-kopi.jpg'
 
 export default function Home() {
   const router = useRouter();
@@ -78,21 +77,15 @@ export default function Home() {
 
   return (
     <>
-      <div className={css.logo}>
-        <div className={`${css.logoInner} logoAnim`}>
-          <Image src={Logo} layout='responsive' alt='logo' />
-        </div>
-      </div>
-
       <div className={css.indexTitle}>
-        <span className={css.indexTitleInner}>Udvalgte</span>
+        <span className={css.indexTitleInner}>Studiet</span>
       </div>
 
       <section className={css.scrollSection}>
 
-        <div className={`${css.scroll} ${css.maze} scroll`} style={{ backgroundColor: '#EFBD6A' }}>
+        <div className={`${css.scroll} ${css.studio} scroll`} style={{ backgroundColor: '#c7c7c7' }}>
           <Image
-            src={Maze}
+            src={Studio}
             layout="responsive"
             className="fadeIn"
             priority='true'
@@ -101,9 +94,9 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.model} scroll`} style={{ backgroundColor: '#D5C8B4' }}>
+        <div className={`${css.scroll} ${css.studio2} scroll`} style={{ backgroundColor: '#fff2df' }}>
           <Image
-            src={Model}
+            src={Studio2}
             layout="responsive"
             className="fadeIn"
             priority='true'
@@ -112,9 +105,9 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.youngskin} scroll`} style={{ backgroundColor: '#C1CDCD' }}>
+        <div className={`${css.scroll} ${css.studio3} scroll`} style={{ backgroundColor: '#2d2018' }}>
           <Image
-            src={Youngskin}
+            src={Studio3}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -122,9 +115,9 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.borster} scroll`} style={{ backgroundColor: 'grey' }}>
+        <div className={`${css.scroll} ${css.studio4} scroll`} style={{ backgroundColor: '#142e65' }}>
           <Image
-            src={Borster}
+            src={Studio4}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -132,9 +125,9 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.scrub} scroll`} style={{ backgroundColor: '#C4BDB7' }}>
+        <div className={`${css.scroll} ${css.studio5} scroll`} style={{ backgroundColor: '#C4BDB7' }}>
           <Image
-            src={Scrub}
+            src={Studio5}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -142,7 +135,7 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.rum} scroll`} style={{ backgroundColor: 'grey' }}>
+        <div className={`${css.scroll} ${css.bymickleit} scroll`} style={{ backgroundColor: '#000000' }}>
           <video
             className='fadeIn'
             autoPlay
@@ -154,13 +147,13 @@ export default function Home() {
             height='100%'
             alt=''
             >
-            <source src={'/Test_web_frontpage.mp4'} type='video/mp4' />
+            <source src={'/studio/ByMickleit_video-kopi.mp4'} type='video/mp4' />
           </video>
         </div>
 
-        <div className={`${css.scroll} ${css.vase} scroll`} style={{ backgroundColor: '#FDEFF9' }}>
+        <div className={`${css.scroll} ${css.studio6} scroll`} style={{ backgroundColor: '#FDEFF9' }}>
           <Image
-            src={Vase}
+            src={Studio6}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -168,9 +161,19 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.hund} scroll`} style={{ backgroundColor: '#FBFBFB' }}>
+        <div className={`${css.scroll} ${css.studio7} scroll`} style={{ backgroundColor: '#ff5050' }}>
           <Image
-            src={Hund}
+              src={Studio7}
+              layout="responsive"
+              className="fadeIn"
+              quality='100'
+              alt=''
+          />
+        </div>
+
+        <div className={`${css.scroll} ${css.hund} scroll`} style={{ backgroundColor: '#212121' }}>
+          <Image
+            src={Studio8}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -178,9 +181,9 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.lemonade} scroll`} style={{ backgroundColor: '#171619' }}>
+        <div className={`${css.scroll} ${css.studio9} scroll`} style={{ backgroundColor: '#ffb893' }}>
           <Image
-            src={Lemonade}
+            src={Studio9}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -188,9 +191,9 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.kvinde} scroll`} style={{ backgroundColor: '#D0DBE4' }}>
+        <div className={`${css.scroll} ${css.studio10} scroll`} style={{ backgroundColor: '#ffcc00' }}>
           <Image
-            src={Kvinde}
+            src={Studio10}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -198,9 +201,25 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.pige} scroll`} style={{ backgroundColor: '#08191C' }}>
+        <div className={`${css.scroll} ${css.studiovideo} scroll`} style={{ backgroundColor: '#000000' }}>
+          <video
+              className='fadeIn'
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{ objectFit: 'cover' }}
+              width='100%'
+              height='100%'
+              alt=''
+          >
+            <source src={'/studio/IMG_2563 2.mp4'} type='video/mp4' />
+          </video>
+        </div>
+
+        <div className={`${css.scroll} ${css.studio11} scroll`} style={{ backgroundColor: '#ff6200' }}>
           <Image
-            src={Pige}
+            src={Studio11}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -208,9 +227,9 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.worker} scroll`} style={{ backgroundColor: '#000000' }}>
+        <div className={`${css.scroll} ${css.studio12} scroll`} style={{ backgroundColor: '#ff5797' }}>
           <Image
-            src={Worker}
+            src={Studio12}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -218,9 +237,9 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.stol} scroll`} style={{ backgroundColor: '#6E8380' }}>
+        <div className={`${css.scroll} ${css.studio13} scroll`} style={{ backgroundColor: '#ff9c38' }}>
           <Image
-            src={Stol}
+            src={Studio13}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -228,9 +247,25 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.rum2} scroll`} style={{ backgroundColor: '#6E8380' }}>
+        <div className={`${css.scroll} ${css.studiovideo} scroll`} style={{ backgroundColor: '#000000' }}>
+          <video
+              className='fadeIn'
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{ objectFit: 'cover' }}
+              width='100%'
+              height='100%'
+              alt=''
+          >
+            <source src={'/studio/IMG_4003.mp4'} type='video/mp4' />
+          </video>
+        </div>
+
+        <div className={`${css.scroll} ${css.studio14} scroll`} style={{ backgroundColor: '#FED2D2' }}>
           <Image
-            src={Rum2}
+            src={Studio14}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -238,9 +273,9 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.organic} scroll`} style={{ backgroundColor: '#FED2D2' }}>
+        <div className={`${css.scroll} ${css.studio15} scroll`} style={{ backgroundColor: '#672929' }}>
           <Image
-            src={Organic}
+            src={Studio15}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -248,9 +283,9 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.is} scroll`} style={{ backgroundColor: '#295267' }}>
+        <div className={`${css.scroll} ${css.studio16} scroll`} style={{ backgroundColor: '#25c000' }}>
           <Image
-            src={Is}
+            src={Studio16}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -258,9 +293,9 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.schaf} scroll`} style={{ backgroundColor: '#7A959F' }}>
+        <div className={`${css.scroll} ${css.studio17} scroll`} style={{ backgroundColor: '#ffa21d' }}>
           <Image
-            src={Schaf}
+            src={Studio17}
             layout="responsive"
             className="fadeIn"
             quality='100'
@@ -268,14 +303,40 @@ export default function Home() {
             />
         </div>
 
-        <div className={`${css.scroll} ${css.antiage} scroll`} style={{ backgroundColor: '#BFB7B5' }}>
+        <div className={`${css.scroll} ${css.studio18} scroll`} style={{ backgroundColor: '#ff7e57' }}>
           <Image
-            src={AntiAge}
-            layout="responsive"
-            className="fadeIn"
-            quality='100'
-            alt=''
-            />
+              src={Studio18}
+              layout="responsive"
+              className="fadeIn"
+              quality='100'
+              alt=''
+          />
+        </div>
+
+        <div className={`${css.scroll} ${css.studiovideo} scroll`} style={{ backgroundColor: '#000000' }}>
+          <video
+              className='fadeIn'
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{ objectFit: 'cover' }}
+              width='100%'
+              height='100%'
+              alt=''
+          >
+            <source src={'/studio/IMG_3976.mp4'} type='video/mp4' />
+          </video>
+        </div>
+
+        <div className={`${css.scroll} ${css.studio19} scroll`} style={{ backgroundColor: '#ff7e57' }}>
+          <Image
+              src={Studio19}
+              layout="responsive"
+              className="fadeIn"
+              quality='100'
+              alt=''
+          />
         </div>
 
       </section>

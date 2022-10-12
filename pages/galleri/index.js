@@ -70,7 +70,7 @@ function Gallery({ children, billeder, backgroundHex }) {
   }
 
   const breakpointColumnsObj = {
-    default: 3,
+    default: 4,
     700: 2
   };
 
